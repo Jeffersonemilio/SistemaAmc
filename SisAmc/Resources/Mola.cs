@@ -64,8 +64,12 @@ namespace SisAmc.Resources
 
         public float calcDiamMed(float DiametroInterno, float DiametroArame)
         {
-            
-            return 0;
+            float vDi, vd, vDm;
+            vDi = DiametroInterno;
+            vd = DiametroArame;
+            vDm = vDi + vd;
+
+            return vDm;
         }
 
         public float calcCompFinal(float DiamentroMedio, float EspirasTotais)
