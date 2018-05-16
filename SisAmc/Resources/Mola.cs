@@ -74,37 +74,90 @@ namespace SisAmc.Resources
 
         public float calcCompFinal(float DiamentroMedio, float EspirasTotais)
         {
-            return 0;
+            float vDm, vIg, CompFinal;
+            vDm = DiamentroMedio;
+            vIg = EspirasTotais;
+
+            CompFinal = vDm * vIg * Convert.ToSingle(Math.PI);
+
+            return CompFinal;
         }
 
         public float calcRelacEnrolamento(float DiamentroMedio, float DiametroArame)
         {
-            return 0;
+            float vDm, vd, vW;
+            vDm = DiamentroMedio;
+            vd = DiametroArame;
+            vW = vDm / vd;
+            
+
+            return vW;
         }
 
-        public bool avaliaRelacEnrolamento(float calcRelacEnrolamento)
+        public bool avaliaRelacEnrolamento(float vW)
         {
-            return false;
+            if (vW < 4 || vW >20)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+
+            
         }
 
         public float calcIndEsbeltez(float AlturaLivre, float calcDiamMed)
         {
-            return 0;
+            float vL0, vDm, vY;
+            vL0 = AlturaLivre;
+            vDm = calcDiamMed;
+            vY = vL0 / vDm;
+
+            return vY;
         }
 
-        public bool avaliaIndEsbeltez(float calcIndEsbeltez)
+        public bool avaliaIndEsbeltez(float vY)
         {
-            return false;
+            if (vY > 5)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+            
         }
 
-        public float calcConstElast(float Tmax, float DiamentroArame, float calcDiamMed, float calcEspUteis)
+        public double calcConstElast(float Tmax, float DiamentroArame, float calcDiamMed, float calcEspUteis)
         {
-            return 0;
+            double vTmax, vd, vDm, vIf, vConstElast;
+            vTmax = Tmax;
+            vd = DiamentroArame;
+            vDm = calcDiamMed;
+            vIf = calcEspUteis;
+
+            //Conta vC ainda incompleta
+            double vC = ( (Convert.ToDouble(8002) * vd) * Math.Exp(4) );
+            Convert.ToSingle(vC);
+            vConstElast = vC;
+            return vConstElast  ;
+            //Retorna um Double
         }
 
-        public float calcSa(float calcDiamMed, float DiametroArame, int calcEspUteis)
+        public double calcSa(float calcDiamMed, float DiametroArame, float calcEspUteis)
         {
-            return 0;
+            double vDm, vd, vIf, vSa;
+            vDm = calcDiamMed;
+            vd = DiametroArame;
+            vIf = calcEspUteis;
+
+
+            vSa = ((0.0015 * (vDm * Math.Exp(2)) / vd + 0.1) * vd) * vIf;
+            //Retorna um Double
+            return vSa;
         }
 
         public float calcLbl(float EspirasTotais, float DiamentroArame)
