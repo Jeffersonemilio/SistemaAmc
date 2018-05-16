@@ -49,7 +49,7 @@ namespace SisAmc.Resources
             float vDi, vd;
             vDi = DiamentroInterno;
             vd = DiamentroArame;
-            float vDe = vDi + (vd * 2);
+            float vDe = vDi + vd * 2;
 
             return vDe;
         }

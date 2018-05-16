@@ -118,58 +118,92 @@ namespace SisAmc
 
 
             string vTf, vAco, vL0, vd, vDi, vIg, vSentHelice;
-            float vDe, vVLo;
+            float vDe, vIf, vDm, vCompTotal, vRelEnr, vIndEsb, vVLo, vVd, vVdi, vVig;
 
             vL0 = txtAltLivre.Text;
             vVLo = converteCampos(vL0);
 
-            if(vVLo == 0)
+            vd = txtDiamArame.Text;
+            vVd = converteCampos(vd);
+
+            vDi = txtDiamInterno.Text;
+            vVdi = converteCampos(vDi);
+
+            vIg = txtEspTotais.Text;
+            vVig = converteCampos(vIg);
+
+
+
+
+
+            if(vVLo == 0 || vVd == 0 || vVdi == 0 || vVig == 0)
             {
-                MessageBox.Show("É 0");
+                MessageBox.Show(Convert.ToString("Valor digitado invalido, por favor revise os valores digitados"));
                 return;
             }
 
             MessageBox.Show("Conversão ok");
 
-
-            
-            vDi = Convert.ToSingle( txtDiamInterno.Text);
-            vd = Convert.ToSingle(txtDiamArame.Text);
-            
-           vDe = ObjMola.calcDiamMed(vDi, vd);
+       
+            vDe = ObjMola.calcDiamExt(vVdi, vVd);
             txtDiamExterno.Text = Convert.ToString(vDe);
 
+            vIf = ObjMola.calcEspUteis(vVig);
+            txtEspUteis.Text = Convert.ToString(vIf);
 
+            vDm = ObjMola.calcDiamMed(vVdi, vVd);
+            txtDiamMedio.Text = Convert.ToString(vDm);
 
+            //Revisar pois ainda não foi criado em sua totalidade.
+            vCompTotal = ObjMola.calcCompFinal(vDm, vVig);
+            lblRelCompFinal.Text = Convert.ToString(vCompTotal);
 
-            ObjMola.DiametroInterno = Convert.ToSingle(txtDiamInterno.Text);
-                lblStatusT1.Text = Convert.ToString(ObjMola.DiametroInterno);
+            vRelEnr = ObjMola.calcRelacEnrolamento(vDm, vVd);
+            //txtRelEnr.Text = Convert.ToString(vRelEnr);
 
-                
-                
-
-           
-
-            
-        }
-
-        public float converteCampos(string campoParaValidar)
-        {
-            string vValor;
-            vValor = campoParaValidar;
-            float vCampo;
-            if (float.TryParse(vValor, out vCampo))
+            if (ObjMola.avaliaRelacEnrolamento(vRelEnr) == false)
             {
-                return vCampo;
+                txtRelEnr.Text = "REPROVADO";
             }
             else
             {
-                MessageBox.Show("Valor digitado invalido, favor revisar");
-                return 0;
+                txtRelEnr.Text = "APROVADO";
             }
 
+            vIndEsb = ObjMola.calcIndEsbeltez(vVLo, vDm);
+            //txtIndEsb.Text = Convert.ToString(vIndEsb);
+
+            if (ObjMola.avaliaIndEsbeltez(vIndEsb) == false)
+            {
+                txtIndEsb.Text = "REPROVADO";
+            }
+            else
+            {
+                txtIndEsb.Text = "APROVADO";
+            }
+            
+
+
+            
+        
+
+
+
+
+            
+
+                
+                
+
            
+
+            
         }
+
+
+        
+        //Esse Metodo verifica se todos os campo foram preenchidos ou se algum campo obrigadorio
+        //foi ignorado pelo usuario
         public Boolean verificaCampos()
         {
             string vTf, vAco, vL0, vd, vDi, vIg, vSentHelice;
@@ -195,6 +229,26 @@ namespace SisAmc
             }
 
             
+        }
+
+        //Esse Metodo realiza a conversão e verificação dos valores digitados pelo usuario, sendo possivel
+        // realiza a conversão para float, n]ao sendo possivel indica que algo está errado.
+        public float converteCampos(string campoParaValidar)
+        {
+            string vValor;
+            vValor = campoParaValidar;
+            float vCampo;
+            if (float.TryParse(vValor, out vCampo))
+            {
+                return vCampo;
+            }
+            else
+            {
+                // MessageBox.Show("Valor digitado invalido, favor revisar");
+                return 0;
+            }
+
+
         }
 
         private void cmbSentHelice_SelectedIndexChanged(object sender, EventArgs e)

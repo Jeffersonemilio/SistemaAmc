@@ -65,8 +65,7 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
+            this.lblCompFinal = new System.Windows.Forms.Label();
             this.txtModTorcao = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.txtTmax = new System.Windows.Forms.TextBox();
@@ -127,9 +126,9 @@
             this.label29 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.txtIndEsb = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.txtRelEnr = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
@@ -151,6 +150,7 @@
             this.btnCalcTf = new System.Windows.Forms.Button();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.txtObs = new System.Windows.Forms.TextBox();
+            this.lblRelCompFinal = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -481,11 +481,11 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.lblRelCompFinal);
             this.groupBox2.Controls.Add(this.comboBox2);
             this.groupBox2.Controls.Add(this.label23);
             this.groupBox2.Controls.Add(this.label24);
-            this.groupBox2.Controls.Add(this.textBox10);
-            this.groupBox2.Controls.Add(this.label22);
+            this.groupBox2.Controls.Add(this.lblCompFinal);
             this.groupBox2.Controls.Add(this.txtModTorcao);
             this.groupBox2.Controls.Add(this.label20);
             this.groupBox2.Controls.Add(this.txtTmax);
@@ -509,7 +509,7 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(404, 24);
+            this.label23.Location = new System.Drawing.Point(426, 24);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(23, 13);
             this.label23.TabIndex = 30;
@@ -524,22 +524,15 @@
             this.label24.TabIndex = 28;
             this.label24.Text = "Linha:";
             // 
-            // textBox10
+            // lblCompFinal
             // 
-            this.textBox10.Location = new System.Drawing.Point(341, 21);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(57, 20);
-            this.textBox10.TabIndex = 26;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(294, 24);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(44, 13);
-            this.label22.TabIndex = 25;
-            this.label22.Text = "Mandril:";
-            this.label22.Click += new System.EventHandler(this.label22_Click);
+            this.lblCompFinal.AutoSize = true;
+            this.lblCompFinal.Location = new System.Drawing.Point(294, 24);
+            this.lblCompFinal.Name = "lblCompFinal";
+            this.lblCompFinal.Size = new System.Drawing.Size(62, 13);
+            this.lblCompFinal.TabIndex = 25;
+            this.lblCompFinal.Text = "Comp. Final";
+            this.lblCompFinal.Click += new System.EventHandler(this.label22_Click);
             // 
             // txtModTorcao
             // 
@@ -580,9 +573,9 @@
             this.groupBox3.Controls.Add(this.groupBox6);
             this.groupBox3.Controls.Add(this.groupBox5);
             this.groupBox3.Controls.Add(this.groupBox4);
-            this.groupBox3.Controls.Add(this.textBox13);
+            this.groupBox3.Controls.Add(this.txtIndEsb);
             this.groupBox3.Controls.Add(this.label21);
-            this.groupBox3.Controls.Add(this.textBox14);
+            this.groupBox3.Controls.Add(this.txtRelEnr);
             this.groupBox3.Controls.Add(this.label25);
             this.groupBox3.Controls.Add(this.textBox12);
             this.groupBox3.Controls.Add(this.label19);
@@ -1191,12 +1184,12 @@
             this.label26.TabIndex = 0;
             this.label26.Text = "L\':";
             // 
-            // textBox13
+            // txtIndEsb
             // 
-            this.textBox13.Location = new System.Drawing.Point(566, 22);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(73, 20);
-            this.textBox13.TabIndex = 7;
+            this.txtIndEsb.Location = new System.Drawing.Point(566, 22);
+            this.txtIndEsb.Name = "txtIndEsb";
+            this.txtIndEsb.Size = new System.Drawing.Size(73, 20);
+            this.txtIndEsb.TabIndex = 7;
             // 
             // label21
             // 
@@ -1208,12 +1201,12 @@
             this.label21.Text = "IND. ESB. ( Y )";
             this.label21.Click += new System.EventHandler(this.label21_Click);
             // 
-            // textBox14
+            // txtRelEnr
             // 
-            this.textBox14.Location = new System.Drawing.Point(389, 23);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(73, 20);
-            this.textBox14.TabIndex = 5;
+            this.txtRelEnr.Location = new System.Drawing.Point(389, 23);
+            this.txtRelEnr.Name = "txtRelEnr";
+            this.txtRelEnr.Size = new System.Drawing.Size(73, 20);
+            this.txtRelEnr.TabIndex = 5;
             // 
             // label25
             // 
@@ -1425,6 +1418,15 @@
             this.txtObs.Size = new System.Drawing.Size(852, 63);
             this.txtObs.TabIndex = 0;
             // 
+            // lblRelCompFinal
+            // 
+            this.lblRelCompFinal.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblRelCompFinal.Location = new System.Drawing.Point(359, 22);
+            this.lblRelCompFinal.Name = "lblRelCompFinal";
+            this.lblRelCompFinal.Size = new System.Drawing.Size(62, 20);
+            this.lblRelCompFinal.TabIndex = 32;
+            this.lblRelCompFinal.Text = "0";
+            // 
             // CalcularTF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1493,8 +1495,7 @@
         private System.Windows.Forms.TextBox txtEspUteis;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label lblCompFinal;
         private System.Windows.Forms.TextBox txtModTorcao;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox txtTmax;
@@ -1503,9 +1504,9 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox txtIndEsb;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox txtRelEnr;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.Label label19;
@@ -1589,5 +1590,6 @@
         private System.Windows.Forms.Button btnCalcTf;
         private System.Windows.Forms.GroupBox groupBox11;
         private System.Windows.Forms.TextBox txtObs;
+        private System.Windows.Forms.Label lblRelCompFinal;
     }
 }
