@@ -10,17 +10,18 @@ namespace SisAmc.Resources
     {
         private int CodTF;
 
-        private char NomeTF;
+        private string NomeTF  ;
 
-        private char DataCreacao;
+        private string DataCreacao;
 
-        private char Localizacao;
+        private string Localizacao;
 
-        private float DiametroInterno;
+        public float DiametroInterno;
 
         private float DiametroArame;
 
-        private float AlturaLivre;
+        private float AlturaLivre { get; set; }
+       
 
         private float EspirasTotais;
 
@@ -156,7 +157,7 @@ namespace SisAmc.Resources
 
 
             vSa = ((0.0015 * (vDm * Math.Exp(2)) / vd + 0.1) * vd) * vIf;
-            //Retorna um Double
+            //Retorna um Doubless
             return vSa;
         }
 

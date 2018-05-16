@@ -145,10 +145,10 @@
             this.label84 = new System.Windows.Forms.Label();
             this.label85 = new System.Windows.Forms.Label();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnConsultar = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
+            this.btnLimpar = new System.Windows.Forms.Button();
+            this.btnCalcTf = new System.Windows.Forms.Button();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.txtObs = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
@@ -211,6 +211,8 @@
             this.txtAco.Name = "txtAco";
             this.txtAco.Size = new System.Drawing.Size(57, 20);
             this.txtAco.TabIndex = 31;
+            this.txtAco.Text = "5160";
+            this.txtAco.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label87
             // 
@@ -346,6 +348,7 @@
             this.cmbSentHelice.Name = "cmbSentHelice";
             this.cmbSentHelice.Size = new System.Drawing.Size(95, 21);
             this.cmbSentHelice.TabIndex = 15;
+            this.cmbSentHelice.SelectedIndexChanged += new System.EventHandler(this.cmbSentHelice_SelectedIndexChanged);
             // 
             // label10
             // 
@@ -397,9 +400,9 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(12, 238);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(100, 13);
+            this.label8.Size = new System.Drawing.Size(104, 13);
             this.label8.TabIndex = 9;
-            this.label8.Text = "Espiras Totais ( Ig ):";
+            this.label8.Text = "Espiras Totais ( Ig )*:";
             // 
             // label5
             // 
@@ -422,9 +425,9 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(11, 150);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(54, 13);
+            this.label6.Size = new System.Drawing.Size(58, 13);
             this.label6.TabIndex = 6;
-            this.label6.Text = "Ø Interno:";
+            this.label6.Text = "Ø Interno*:";
             // 
             // label3
             // 
@@ -447,9 +450,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(11, 124);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 13);
+            this.label4.Size = new System.Drawing.Size(76, 13);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Ø Arame ( d ):";
+            this.label4.Text = "Ø Arame ( d )*:";
             // 
             // label2
             // 
@@ -472,9 +475,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(11, 97);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 13);
+            this.label1.Size = new System.Drawing.Size(94, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Altura Livre ( L0 ):";
+            this.label1.Text = "Altura Livre ( L0 )*:";
             // 
             // groupBox2
             // 
@@ -1354,10 +1357,10 @@
             // groupBox10
             // 
             this.groupBox10.AutoSize = true;
-            this.groupBox10.Controls.Add(this.button4);
-            this.groupBox10.Controls.Add(this.button3);
-            this.groupBox10.Controls.Add(this.button2);
-            this.groupBox10.Controls.Add(this.button1);
+            this.groupBox10.Controls.Add(this.btnConsultar);
+            this.groupBox10.Controls.Add(this.btnSalvar);
+            this.groupBox10.Controls.Add(this.btnLimpar);
+            this.groupBox10.Controls.Add(this.btnCalcTf);
             this.groupBox10.Location = new System.Drawing.Point(14, 514);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Size = new System.Drawing.Size(862, 81);
@@ -1365,41 +1368,42 @@
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "CONTROLES:";
             // 
-            // button4
+            // btnConsultar
             // 
-            this.button4.Location = new System.Drawing.Point(659, 24);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(182, 38);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "CONSULTAR TF";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnConsultar.Location = new System.Drawing.Point(659, 24);
+            this.btnConsultar.Name = "btnConsultar";
+            this.btnConsultar.Size = new System.Drawing.Size(182, 38);
+            this.btnConsultar.TabIndex = 3;
+            this.btnConsultar.Text = "CONSULTAR TF";
+            this.btnConsultar.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnSalvar
             // 
-            this.button3.Location = new System.Drawing.Point(440, 24);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(182, 38);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "SALVAR";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnSalvar.Location = new System.Drawing.Point(440, 24);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(182, 38);
+            this.btnSalvar.TabIndex = 2;
+            this.btnSalvar.Text = "SALVAR";
+            this.btnSalvar.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnLimpar
             // 
-            this.button2.Location = new System.Drawing.Point(231, 24);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(178, 38);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "LIMPAR CAMPOS";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnLimpar.Location = new System.Drawing.Point(231, 24);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(178, 38);
+            this.btnLimpar.TabIndex = 1;
+            this.btnLimpar.Text = "LIMPAR CAMPOS";
+            this.btnLimpar.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnCalcTf
             // 
-            this.button1.Location = new System.Drawing.Point(16, 24);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(182, 38);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "CALCULAR";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnCalcTf.Location = new System.Drawing.Point(16, 24);
+            this.btnCalcTf.Name = "btnCalcTf";
+            this.btnCalcTf.Size = new System.Drawing.Size(182, 38);
+            this.btnCalcTf.TabIndex = 0;
+            this.btnCalcTf.Text = "CALCULAR";
+            this.btnCalcTf.UseVisualStyleBackColor = true;
+            this.btnCalcTf.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox11
             // 
@@ -1579,10 +1583,10 @@
         private System.Windows.Forms.TextBox txtTf;
         private System.Windows.Forms.Label label86;
         private System.Windows.Forms.GroupBox groupBox10;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnConsultar;
+        private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.Button btnLimpar;
+        private System.Windows.Forms.Button btnCalcTf;
         private System.Windows.Forms.GroupBox groupBox11;
         private System.Windows.Forms.TextBox txtObs;
     }
