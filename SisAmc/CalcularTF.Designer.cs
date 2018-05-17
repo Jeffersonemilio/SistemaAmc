@@ -62,6 +62,7 @@
             this.txtAltLivre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lblRelCompFinal = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
@@ -100,9 +101,9 @@
             this.label56 = new System.Windows.Forms.Label();
             this.label57 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.label42 = new System.Windows.Forms.Label();
+            this.lblSbl = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
+            this.lblSn = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
             this.label46 = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
@@ -118,9 +119,9 @@
             this.label40 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label32 = new System.Windows.Forms.Label();
+            this.lblLbl = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
+            this.lblLn = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
@@ -130,9 +131,9 @@
             this.label21 = new System.Windows.Forms.Label();
             this.txtRelEnr = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.txtSa = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.txtConsElast = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.label78 = new System.Windows.Forms.Label();
@@ -150,7 +151,6 @@
             this.btnCalcTf = new System.Windows.Forms.Button();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.txtObs = new System.Windows.Forms.TextBox();
-            this.lblRelCompFinal = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -497,6 +497,15 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "PARÂMETROS:";
             // 
+            // lblRelCompFinal
+            // 
+            this.lblRelCompFinal.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblRelCompFinal.Location = new System.Drawing.Point(359, 22);
+            this.lblRelCompFinal.Name = "lblRelCompFinal";
+            this.lblRelCompFinal.Size = new System.Drawing.Size(62, 20);
+            this.lblRelCompFinal.TabIndex = 32;
+            this.lblRelCompFinal.Text = "0";
+            // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
@@ -577,9 +586,9 @@
             this.groupBox3.Controls.Add(this.label21);
             this.groupBox3.Controls.Add(this.txtRelEnr);
             this.groupBox3.Controls.Add(this.label25);
-            this.groupBox3.Controls.Add(this.textBox12);
+            this.groupBox3.Controls.Add(this.txtSa);
             this.groupBox3.Controls.Add(this.label19);
-            this.groupBox3.Controls.Add(this.textBox11);
+            this.groupBox3.Controls.Add(this.txtConsElast);
             this.groupBox3.Controls.Add(this.label17);
             this.groupBox3.Location = new System.Drawing.Point(230, 76);
             this.groupBox3.Name = "groupBox3";
@@ -895,9 +904,9 @@
             // groupBox6
             // 
             this.groupBox6.AutoSize = true;
-            this.groupBox6.Controls.Add(this.label42);
+            this.groupBox6.Controls.Add(this.lblSbl);
             this.groupBox6.Controls.Add(this.label43);
-            this.groupBox6.Controls.Add(this.label44);
+            this.groupBox6.Controls.Add(this.lblSn);
             this.groupBox6.Controls.Add(this.label45);
             this.groupBox6.Controls.Add(this.label46);
             this.groupBox6.Controls.Add(this.label47);
@@ -909,16 +918,16 @@
             this.groupBox6.TabIndex = 11;
             this.groupBox6.TabStop = false;
             // 
-            // label42
+            // lblSbl
             // 
-            this.label42.BackColor = System.Drawing.SystemColors.Control;
-            this.label42.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label42.Location = new System.Drawing.Point(40, 101);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(63, 20);
-            this.label42.TabIndex = 7;
-            this.label42.Text = "0";
-            this.label42.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSbl.BackColor = System.Drawing.SystemColors.Control;
+            this.lblSbl.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblSbl.Location = new System.Drawing.Point(40, 101);
+            this.lblSbl.Name = "lblSbl";
+            this.lblSbl.Size = new System.Drawing.Size(63, 20);
+            this.lblSbl.TabIndex = 7;
+            this.lblSbl.Text = "0";
+            this.lblSbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label43
             // 
@@ -929,16 +938,16 @@
             this.label43.TabIndex = 6;
             this.label43.Text = "Sbl:";
             // 
-            // label44
+            // lblSn
             // 
-            this.label44.BackColor = System.Drawing.SystemColors.Control;
-            this.label44.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label44.Location = new System.Drawing.Point(40, 73);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(63, 20);
-            this.label44.TabIndex = 5;
-            this.label44.Text = "0";
-            this.label44.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSn.BackColor = System.Drawing.SystemColors.Control;
+            this.lblSn.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblSn.Location = new System.Drawing.Point(40, 73);
+            this.lblSn.Name = "lblSn";
+            this.lblSn.Size = new System.Drawing.Size(63, 20);
+            this.lblSn.TabIndex = 5;
+            this.lblSn.Text = "0";
+            this.lblSn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label45
             // 
@@ -1090,9 +1099,9 @@
             // groupBox4
             // 
             this.groupBox4.AutoSize = true;
-            this.groupBox4.Controls.Add(this.label32);
+            this.groupBox4.Controls.Add(this.lblLbl);
             this.groupBox4.Controls.Add(this.label33);
-            this.groupBox4.Controls.Add(this.label30);
+            this.groupBox4.Controls.Add(this.lblLn);
             this.groupBox4.Controls.Add(this.label31);
             this.groupBox4.Controls.Add(this.label28);
             this.groupBox4.Controls.Add(this.label29);
@@ -1104,16 +1113,16 @@
             this.groupBox4.TabIndex = 9;
             this.groupBox4.TabStop = false;
             // 
-            // label32
+            // lblLbl
             // 
-            this.label32.BackColor = System.Drawing.SystemColors.Control;
-            this.label32.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label32.Location = new System.Drawing.Point(40, 101);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(63, 20);
-            this.label32.TabIndex = 7;
-            this.label32.Text = "0";
-            this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblLbl.BackColor = System.Drawing.SystemColors.Control;
+            this.lblLbl.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblLbl.Location = new System.Drawing.Point(40, 101);
+            this.lblLbl.Name = "lblLbl";
+            this.lblLbl.Size = new System.Drawing.Size(63, 20);
+            this.lblLbl.TabIndex = 7;
+            this.lblLbl.Text = "0";
+            this.lblLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label33
             // 
@@ -1124,16 +1133,16 @@
             this.label33.TabIndex = 6;
             this.label33.Text = "Lbl:";
             // 
-            // label30
+            // lblLn
             // 
-            this.label30.BackColor = System.Drawing.SystemColors.Control;
-            this.label30.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label30.Location = new System.Drawing.Point(40, 73);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(63, 20);
-            this.label30.TabIndex = 5;
-            this.label30.Text = "0";
-            this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblLn.BackColor = System.Drawing.SystemColors.Control;
+            this.lblLn.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblLn.Location = new System.Drawing.Point(40, 73);
+            this.lblLn.Name = "lblLn";
+            this.lblLn.Size = new System.Drawing.Size(63, 20);
+            this.lblLn.TabIndex = 5;
+            this.lblLn.Text = "0";
+            this.lblLn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label31
             // 
@@ -1217,12 +1226,12 @@
             this.label25.TabIndex = 4;
             this.label25.Text = "Rel. Enr ( W ):";
             // 
-            // textBox12
+            // txtSa
             // 
-            this.textBox12.Location = new System.Drawing.Point(225, 23);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(73, 20);
-            this.textBox12.TabIndex = 3;
+            this.txtSa.Location = new System.Drawing.Point(225, 23);
+            this.txtSa.Name = "txtSa";
+            this.txtSa.Size = new System.Drawing.Size(73, 20);
+            this.txtSa.TabIndex = 3;
             // 
             // label19
             // 
@@ -1233,12 +1242,12 @@
             this.label19.TabIndex = 2;
             this.label19.Text = "Sa:";
             // 
-            // textBox11
+            // txtConsElast
             // 
-            this.textBox11.Location = new System.Drawing.Point(110, 24);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(73, 20);
-            this.textBox11.TabIndex = 1;
+            this.txtConsElast.Location = new System.Drawing.Point(110, 24);
+            this.txtConsElast.Name = "txtConsElast";
+            this.txtConsElast.Size = new System.Drawing.Size(73, 20);
+            this.txtConsElast.TabIndex = 1;
             // 
             // label17
             // 
@@ -1418,15 +1427,6 @@
             this.txtObs.Size = new System.Drawing.Size(852, 63);
             this.txtObs.TabIndex = 0;
             // 
-            // lblRelCompFinal
-            // 
-            this.lblRelCompFinal.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblRelCompFinal.Location = new System.Drawing.Point(359, 22);
-            this.lblRelCompFinal.Name = "lblRelCompFinal";
-            this.lblRelCompFinal.Size = new System.Drawing.Size(62, 20);
-            this.lblRelCompFinal.TabIndex = 32;
-            this.lblRelCompFinal.Text = "0";
-            // 
             // CalcularTF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1508,9 +1508,9 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox txtRelEnr;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox txtSa;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox txtConsElast;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Label label34;
@@ -1522,9 +1522,9 @@
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label lblLbl;
         private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label lblLn;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label29;
@@ -1553,9 +1553,9 @@
         private System.Windows.Forms.Label label56;
         private System.Windows.Forms.Label label57;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label lblSbl;
         private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label lblSn;
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.Label label47;

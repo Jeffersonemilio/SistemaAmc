@@ -118,7 +118,9 @@ namespace SisAmc
 
 
             string vTf, vAco, vL0, vd, vDi, vIg, vSentHelice;
-            float vDe, vIf, vDm, vCompTotal, vRelEnr, vIndEsb, vVLo, vVd, vVdi, vVig;
+            float vDe, vIf, vDm, vCompTotal, vRelEnr, vIndEsb, vConstElast, vLbl, vSa, vLn, vSbl, vSn,
+                vVLo, vVd, vVdi, vVig;
+            bool vCkcRetifica;
 
             vL0 = txtAltLivre.Text;
             vVLo = converteCampos(vL0);
@@ -131,6 +133,8 @@ namespace SisAmc
 
             vIg = txtEspTotais.Text;
             vVig = converteCampos(vIg);
+
+            vCkcRetifica = ckcRetificada.Checked;
 
 
 
@@ -181,9 +185,28 @@ namespace SisAmc
             {
                 txtIndEsb.Text = "APROVADO";
             }
-            
+
+             
+            vConstElast = Convert.ToSingle(ObjMola.calcConstElast(100, vVd, vDm, vIf));
+            txtConsElast.Text = Convert.ToString(vConstElast);
+
+            vSa = Convert.ToSingle(ObjMola.calcSa(vDm, vVd, vIf));
+            txtSa.Text = Convert.ToString(vSa);
+
+            vLbl = ObjMola.calcLbl(vVig, vVd, vCkcRetifica);
+            lblLbl.Text = Convert.ToString(vLbl);
+
+            vLn = ObjMola.calcLn(vSa, vLbl);
+            lblLn.Text = Convert.ToString(vLn);
+
+            vSbl = ObjMola.calcSbl(vLbl, vVLo);
+            lblSbl.Text = Convert.ToString(vSbl);
+
+            vSn = ObjMola.calcSn(vSbl, vSa);
+            lblSn.Text = Convert.ToString(vSn);
 
 
+        
             
         
 

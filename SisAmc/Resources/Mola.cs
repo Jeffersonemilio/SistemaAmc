@@ -140,8 +140,8 @@ namespace SisAmc.Resources
             vDm = calcDiamMed;
             vIf = calcEspUteis;
 
-            //Conta vC ainda incompleta
-            double vC = ( (Convert.ToDouble(8002) * vd) * Math.Exp(4) );
+            //Conta esta correta!!!
+            double vC = (8002 * Math.Pow(vd, 4)) / (8 * Math.Pow(vDm, 3) * vIf);
             Convert.ToSingle(vC);
             vConstElast = vC;
             return vConstElast  ;
@@ -154,41 +154,80 @@ namespace SisAmc.Resources
             vDm = calcDiamMed;
             vd = DiametroArame;
             vIf = calcEspUteis;
-
-
-            vSa = ((0.0015 * (vDm * Math.Exp(2)) / vd + 0.1) * vd) * vIf;
-            //Retorna um Doubless
+            
+            //Conta correta, Mais tenho que arredondar as casas decimais.
+            vSa = (0.0015 * (Math.Pow(vDm, 2)/ vd) +0.1 * vd) * vIf;
+            
+            //Retorna um Double
             return vSa;
         }
 
-        public float calcLbl(float EspirasTotais, float DiamentroArame)
+        public float calcLbl(float EspirasTotais, float DiamentroArame, bool Retifica)
         {
-            return 0;
+            float vIg, vd, vLbl;
+            bool vRetifica ;
+
+            vIg = EspirasTotais;
+            vd = DiamentroArame;
+            vRetifica = Retifica;
+
+            if (vRetifica == true)
+            {
+                vLbl = (vIg -  Convert.ToSingle( 0.5 )) * vd;
+            }
+            else
+            {
+                vLbl = (vIg + 1) * vd;
+            }
+
+
+            return vLbl;
         }
 
         public float calcLn(float calcSa, float calcLbl)
         {
-            return 0;
+            float vSa, vLbl, vLn;
+            vSa = calcSa;
+            vLbl = calcLbl;
+            vLn = vSa + vLbl;
+
+
+            return vLn;
         }
 
-        public void calcSbl(float calcLbl, float AlturaLivre)
+        public float calcSbl(float calcLbl, float AlturaLivre)
         {
+            float vLbl, vL0, vSbl;
+            vLbl = calcLbl;
+            vL0 = AlturaLivre;
 
+            return vSbl = vL0 - vLbl;
+
+            
         }
 
         public float calcSn(float calcSbl, float calcSa)
         {
-            return 0;
+            float vSn;
+                      
+
+            return vSn = calcSbl - calcSa;
         }
 
         public float calcSs1(float calcSn)
         {
-            return 0;
+            float vSs1;
+
+
+            return vSs1 = calcSn * Convert.ToSingle(0.3);
         }
 
         public float calcSs2(float calcSn)
         {
-            return 0;
+            float vSs2;
+                 
+
+            return vSs2 = calcSn * Convert.ToSingle( 0.7);
         }
 
         public float calcLl1(float AlturaLivre, float calcSs1)
@@ -198,7 +237,9 @@ namespace SisAmc.Resources
 
         public float calcLl2(float AlturaLivre, float calcSs2)
         {
-            return 0;
+            float vLl2;
+            //////
+            return vLl2 = AlturaLivre;
         }
 
         public float calcPbl(float calcSbl, float calcConstElast)
