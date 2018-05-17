@@ -232,69 +232,155 @@ namespace SisAmc.Resources
 
         public float calcLl1(float AlturaLivre, float calcSs1)
         {
-            return 0;
+            float vLl1;
+
+            return vLl1 = AlturaLivre + calcSs1;
         }
 
         public float calcLl2(float AlturaLivre, float calcSs2)
         {
             float vLl2;
-            //////
-            return vLl2 = AlturaLivre;
+            
+            return vLl2 = AlturaLivre + calcSs2;
         }
 
         public float calcPbl(float calcSbl, float calcConstElast)
         {
-            return 0;
+            float vPbl;
+
+
+            return vPbl = calcSbl * calcConstElast;
         }
 
-        public float calcPn(float calcSn, float calConstElast)
+        public float calcPn(float calcSn, float calcConstElast)
         {
-            return 0;
+            float vPn;
+
+
+            return vPn = calcSn * calcConstElast;
         }
 
         public float calcPp1(float calcSs1, float calcConstElast)
         {
-            return 0;
+            float vPp1;
+
+
+            return vPp1 = calcSs1 * calcConstElast;
         }
 
         public float calcPp2(float calcSs2, float calcConstElast)
         {
-            return 0;
+            float vPp2;
+
+
+            return vPp2 = calcSs2 * calcConstElast;
         }
 
         public float calcTbl(float DiamentroMedio, float calcPbl, float DiametroArame)
         {
-            return 0;
+            float vDm, vPbl, vd, vTbl;
+            vDm = DiamentroMedio;
+            vPbl = calcPbl;
+            vd = DiametroArame;
+
+            vTbl = (8 * vDm * vPbl) / (Convert.ToSingle(Math.PI) * vd *  3);
+
+
+            return vTbl;
         }
 
         public float calcTn(float DiamentroMedio, float calcPn, float DiametroArame)
         {
-            return 0;
+            float vDm, vPn, vd, vTn;
+            vDm = DiamentroMedio;
+            vPn = calcPn;
+            vd = DiametroArame;
+
+            vTn = (8 * vDm * vPn) / (Convert.ToSingle(Math.PI) * vd * 3);
+
+
+            return vTn;
         }
 
         public float calcTt1(float DiamentroMedio, float calcPp1, float DiametroArame)
         {
-            return 0;
+            float vDm, vPp1, vd, vTt1;
+            vDm = DiamentroMedio;
+            vPp1 = calcPp1;
+            vd = DiametroArame;
+
+            vTt1 = (8 * vDm * vPp1) / (Convert.ToSingle(Math.PI) * vd * 3);
+
+
+            return vTt1;
         }
 
         public float calcTt2(float DiamentroMedio, float calcPp2, float DiametroArame)
         {
-            return 0;
+            float vDm, vPp2, vd, vTt2;
+            vDm = DiamentroMedio;
+            vPp2 = calcPp2;
+            vd = DiametroArame;
+
+            vTt2 = (8 * vDm * vPp2) / (Convert.ToSingle(Math.PI) * vd * 3);
+
+
+            return vTt2;
         }
 
         public float calcBarraTest(float DiamentroMedio, float calcCompFinal)
         {
-            return 0;
+            float vDm, vCompFinal, vBarraTest;
+            vDm = DiamentroMedio;
+            vCompFinal = calcCompFinal;
+
+            vBarraTest = (vDm * Convert.ToSingle(Math.PI) * Convert.ToSingle(1.5) + vCompFinal + 250); 
+
+            return vBarraTest;
         }
 
         public float calcBarraEnrolar(float calcCompFinal)
         {
-            return 0;
+            float vBarraEnrolar;
+
+            return  vBarraEnrolar = calcCompFinal + 250;
         }
 
         public float calcPesoUnid(float DiamentroArame, float calcCompFinal)
         {
-            return 0;
+            float vd, vCompFinal, vPesoUnid, vPi;
+            vd = DiamentroArame;
+            vCompFinal = calcCompFinal;
+            vPi = Convert.ToSingle(Math.PI);
+
+            Double p1, p2, p3, p4, p5, p6, p7, p8, p9;
+
+            p1 = vd / 2;
+
+            p2 = Math.Pow(p1, 2);
+
+            p3 = p2 * Math.PI;
+
+            p4 = p3 * 7.35;
+
+            p5 = Math.Pow(10, 3);
+
+            p6 = p4 / p5;
+
+            p7 = p6 * vCompFinal;
+
+            p8 = p5;
+
+            p9 = p7 / p8;
+
+
+            //Não sei se essa formula vai dar certo ou errado...
+
+            vPesoUnid = Convert.ToSingle(p9);
+        
+
+
+            return vPesoUnid;
         }
 
         public float calcS1(float calcSs1)
