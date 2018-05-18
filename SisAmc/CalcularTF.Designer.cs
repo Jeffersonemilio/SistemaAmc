@@ -63,7 +63,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lblRelCompFinal = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmbLinhaAuto = new System.Windows.Forms.ComboBox();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.lblCompFinal = new System.Windows.Forms.Label();
@@ -92,40 +92,40 @@
             this.label59 = new System.Windows.Forms.Label();
             this.label60 = new System.Windows.Forms.Label();
             this.label61 = new System.Windows.Forms.Label();
-            this.label50 = new System.Windows.Forms.Label();
+            this.lblTbl = new System.Windows.Forms.Label();
             this.label51 = new System.Windows.Forms.Label();
-            this.label52 = new System.Windows.Forms.Label();
+            this.lblTn = new System.Windows.Forms.Label();
             this.label53 = new System.Windows.Forms.Label();
-            this.label54 = new System.Windows.Forms.Label();
+            this.lblTt2 = new System.Windows.Forms.Label();
             this.label55 = new System.Windows.Forms.Label();
-            this.label56 = new System.Windows.Forms.Label();
+            this.lblTt1 = new System.Windows.Forms.Label();
             this.label57 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.lblSbl = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
             this.lblSn = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
-            this.label46 = new System.Windows.Forms.Label();
+            this.lblSs2 = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
-            this.label48 = new System.Windows.Forms.Label();
+            this.lblSs1 = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.label34 = new System.Windows.Forms.Label();
+            this.lblPbl = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
+            this.lblPn = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
+            this.lblPp2 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
+            this.lblPp1 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.lblLbl = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.lblLn = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
+            this.lblLl2 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
+            this.lblLl1 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.txtIndEsb = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
@@ -136,13 +136,13 @@
             this.txtConsElast = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.label78 = new System.Windows.Forms.Label();
+            this.lblCorPintura = new System.Windows.Forms.Label();
             this.label79 = new System.Windows.Forms.Label();
-            this.label80 = new System.Windows.Forms.Label();
+            this.lblPesoMola = new System.Windows.Forms.Label();
             this.label81 = new System.Windows.Forms.Label();
-            this.label82 = new System.Windows.Forms.Label();
+            this.lblBarraEnrolar = new System.Windows.Forms.Label();
             this.label83 = new System.Windows.Forms.Label();
-            this.label84 = new System.Windows.Forms.Label();
+            this.lblBarraTeste = new System.Windows.Forms.Label();
             this.label85 = new System.Windows.Forms.Label();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.btnConsultar = new System.Windows.Forms.Button();
@@ -482,7 +482,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.lblRelCompFinal);
-            this.groupBox2.Controls.Add(this.comboBox2);
+            this.groupBox2.Controls.Add(this.cmbLinhaAuto);
             this.groupBox2.Controls.Add(this.label23);
             this.groupBox2.Controls.Add(this.label24);
             this.groupBox2.Controls.Add(this.lblCompFinal);
@@ -506,14 +506,14 @@
             this.lblRelCompFinal.TabIndex = 32;
             this.lblRelCompFinal.Text = "0";
             // 
-            // comboBox2
+            // cmbLinhaAuto
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(488, 21);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(91, 21);
-            this.comboBox2.TabIndex = 31;
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.cmbLinhaAuto.FormattingEnabled = true;
+            this.cmbLinhaAuto.Location = new System.Drawing.Point(488, 21);
+            this.cmbLinhaAuto.Name = "cmbLinhaAuto";
+            this.cmbLinhaAuto.Size = new System.Drawing.Size(91, 21);
+            this.cmbLinhaAuto.TabIndex = 31;
+            this.cmbLinhaAuto.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // label23
             // 
@@ -770,13 +770,13 @@
             this.groupBox7.Controls.Add(this.label59);
             this.groupBox7.Controls.Add(this.label60);
             this.groupBox7.Controls.Add(this.label61);
-            this.groupBox7.Controls.Add(this.label50);
+            this.groupBox7.Controls.Add(this.lblTbl);
             this.groupBox7.Controls.Add(this.label51);
-            this.groupBox7.Controls.Add(this.label52);
+            this.groupBox7.Controls.Add(this.lblTn);
             this.groupBox7.Controls.Add(this.label53);
-            this.groupBox7.Controls.Add(this.label54);
+            this.groupBox7.Controls.Add(this.lblTt2);
             this.groupBox7.Controls.Add(this.label55);
-            this.groupBox7.Controls.Add(this.label56);
+            this.groupBox7.Controls.Add(this.lblTt1);
             this.groupBox7.Controls.Add(this.label57);
             this.groupBox7.Location = new System.Drawing.Point(428, 46);
             this.groupBox7.Name = "groupBox7";
@@ -820,16 +820,16 @@
             this.label61.TabIndex = 8;
             this.label61.Text = "STATUS";
             // 
-            // label50
+            // lblTbl
             // 
-            this.label50.BackColor = System.Drawing.SystemColors.Control;
-            this.label50.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label50.Location = new System.Drawing.Point(40, 101);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(63, 20);
-            this.label50.TabIndex = 7;
-            this.label50.Text = "0";
-            this.label50.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTbl.BackColor = System.Drawing.SystemColors.Control;
+            this.lblTbl.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblTbl.Location = new System.Drawing.Point(40, 101);
+            this.lblTbl.Name = "lblTbl";
+            this.lblTbl.Size = new System.Drawing.Size(63, 20);
+            this.lblTbl.TabIndex = 7;
+            this.lblTbl.Text = "0";
+            this.lblTbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label51
             // 
@@ -840,16 +840,16 @@
             this.label51.TabIndex = 6;
             this.label51.Text = "Tbl:";
             // 
-            // label52
+            // lblTn
             // 
-            this.label52.BackColor = System.Drawing.SystemColors.Control;
-            this.label52.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label52.Location = new System.Drawing.Point(40, 73);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(63, 20);
-            this.label52.TabIndex = 5;
-            this.label52.Text = "0";
-            this.label52.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTn.BackColor = System.Drawing.SystemColors.Control;
+            this.lblTn.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblTn.Location = new System.Drawing.Point(40, 73);
+            this.lblTn.Name = "lblTn";
+            this.lblTn.Size = new System.Drawing.Size(63, 20);
+            this.lblTn.TabIndex = 5;
+            this.lblTn.Text = "0";
+            this.lblTn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label53
             // 
@@ -860,16 +860,16 @@
             this.label53.TabIndex = 4;
             this.label53.Text = "Tn:";
             // 
-            // label54
+            // lblTt2
             // 
-            this.label54.BackColor = System.Drawing.SystemColors.Control;
-            this.label54.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label54.Location = new System.Drawing.Point(40, 44);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(63, 20);
-            this.label54.TabIndex = 3;
-            this.label54.Text = "0";
-            this.label54.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTt2.BackColor = System.Drawing.SystemColors.Control;
+            this.lblTt2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblTt2.Location = new System.Drawing.Point(40, 44);
+            this.lblTt2.Name = "lblTt2";
+            this.lblTt2.Size = new System.Drawing.Size(63, 20);
+            this.lblTt2.TabIndex = 3;
+            this.lblTt2.Text = "0";
+            this.lblTt2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label55
             // 
@@ -880,16 +880,16 @@
             this.label55.TabIndex = 2;
             this.label55.Text = "T\'\':";
             // 
-            // label56
+            // lblTt1
             // 
-            this.label56.BackColor = System.Drawing.SystemColors.Control;
-            this.label56.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label56.Location = new System.Drawing.Point(40, 16);
-            this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(63, 20);
-            this.label56.TabIndex = 1;
-            this.label56.Text = "0";
-            this.label56.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTt1.BackColor = System.Drawing.SystemColors.Control;
+            this.lblTt1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblTt1.Location = new System.Drawing.Point(40, 16);
+            this.lblTt1.Name = "lblTt1";
+            this.lblTt1.Size = new System.Drawing.Size(63, 20);
+            this.lblTt1.TabIndex = 1;
+            this.lblTt1.Text = "0";
+            this.lblTt1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label57
             // 
@@ -908,9 +908,9 @@
             this.groupBox6.Controls.Add(this.label43);
             this.groupBox6.Controls.Add(this.lblSn);
             this.groupBox6.Controls.Add(this.label45);
-            this.groupBox6.Controls.Add(this.label46);
+            this.groupBox6.Controls.Add(this.lblSs2);
             this.groupBox6.Controls.Add(this.label47);
-            this.groupBox6.Controls.Add(this.label48);
+            this.groupBox6.Controls.Add(this.lblSs1);
             this.groupBox6.Controls.Add(this.label49);
             this.groupBox6.Location = new System.Drawing.Point(297, 47);
             this.groupBox6.Name = "groupBox6";
@@ -958,16 +958,16 @@
             this.label45.TabIndex = 4;
             this.label45.Text = "Sn:";
             // 
-            // label46
+            // lblSs2
             // 
-            this.label46.BackColor = System.Drawing.SystemColors.Control;
-            this.label46.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label46.Location = new System.Drawing.Point(40, 44);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(63, 20);
-            this.label46.TabIndex = 3;
-            this.label46.Text = "0";
-            this.label46.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSs2.BackColor = System.Drawing.SystemColors.Control;
+            this.lblSs2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblSs2.Location = new System.Drawing.Point(40, 44);
+            this.lblSs2.Name = "lblSs2";
+            this.lblSs2.Size = new System.Drawing.Size(63, 20);
+            this.lblSs2.TabIndex = 3;
+            this.lblSs2.Text = "0";
+            this.lblSs2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label47
             // 
@@ -978,16 +978,16 @@
             this.label47.TabIndex = 2;
             this.label47.Text = "S\'\':";
             // 
-            // label48
+            // lblSs1
             // 
-            this.label48.BackColor = System.Drawing.SystemColors.Control;
-            this.label48.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label48.Location = new System.Drawing.Point(40, 16);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(63, 20);
-            this.label48.TabIndex = 1;
-            this.label48.Text = "0";
-            this.label48.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSs1.BackColor = System.Drawing.SystemColors.Control;
+            this.lblSs1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblSs1.Location = new System.Drawing.Point(40, 16);
+            this.lblSs1.Name = "lblSs1";
+            this.lblSs1.Size = new System.Drawing.Size(63, 20);
+            this.lblSs1.TabIndex = 1;
+            this.lblSs1.Text = "0";
+            this.lblSs1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label49
             // 
@@ -1001,13 +1001,13 @@
             // groupBox5
             // 
             this.groupBox5.AutoSize = true;
-            this.groupBox5.Controls.Add(this.label34);
+            this.groupBox5.Controls.Add(this.lblPbl);
             this.groupBox5.Controls.Add(this.label35);
-            this.groupBox5.Controls.Add(this.label36);
+            this.groupBox5.Controls.Add(this.lblPn);
             this.groupBox5.Controls.Add(this.label37);
-            this.groupBox5.Controls.Add(this.label38);
+            this.groupBox5.Controls.Add(this.lblPp2);
             this.groupBox5.Controls.Add(this.label39);
-            this.groupBox5.Controls.Add(this.label40);
+            this.groupBox5.Controls.Add(this.lblPp1);
             this.groupBox5.Controls.Add(this.label41);
             this.groupBox5.Location = new System.Drawing.Point(151, 48);
             this.groupBox5.Name = "groupBox5";
@@ -1016,16 +1016,16 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Enter += new System.EventHandler(this.groupBox5_Enter);
             // 
-            // label34
+            // lblPbl
             // 
-            this.label34.BackColor = System.Drawing.SystemColors.Control;
-            this.label34.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label34.Location = new System.Drawing.Point(40, 101);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(63, 20);
-            this.label34.TabIndex = 7;
-            this.label34.Text = "0";
-            this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblPbl.BackColor = System.Drawing.SystemColors.Control;
+            this.lblPbl.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblPbl.Location = new System.Drawing.Point(40, 101);
+            this.lblPbl.Name = "lblPbl";
+            this.lblPbl.Size = new System.Drawing.Size(63, 20);
+            this.lblPbl.TabIndex = 7;
+            this.lblPbl.Text = "0";
+            this.lblPbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label35
             // 
@@ -1036,16 +1036,16 @@
             this.label35.TabIndex = 6;
             this.label35.Text = "Pbl:";
             // 
-            // label36
+            // lblPn
             // 
-            this.label36.BackColor = System.Drawing.SystemColors.Control;
-            this.label36.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label36.Location = new System.Drawing.Point(40, 73);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(63, 20);
-            this.label36.TabIndex = 5;
-            this.label36.Text = "0";
-            this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblPn.BackColor = System.Drawing.SystemColors.Control;
+            this.lblPn.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblPn.Location = new System.Drawing.Point(40, 73);
+            this.lblPn.Name = "lblPn";
+            this.lblPn.Size = new System.Drawing.Size(63, 20);
+            this.lblPn.TabIndex = 5;
+            this.lblPn.Text = "0";
+            this.lblPn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label37
             // 
@@ -1056,16 +1056,16 @@
             this.label37.TabIndex = 4;
             this.label37.Text = "Pn:";
             // 
-            // label38
+            // lblPp2
             // 
-            this.label38.BackColor = System.Drawing.SystemColors.Control;
-            this.label38.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label38.Location = new System.Drawing.Point(40, 44);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(63, 20);
-            this.label38.TabIndex = 3;
-            this.label38.Text = "0";
-            this.label38.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblPp2.BackColor = System.Drawing.SystemColors.Control;
+            this.lblPp2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblPp2.Location = new System.Drawing.Point(40, 44);
+            this.lblPp2.Name = "lblPp2";
+            this.lblPp2.Size = new System.Drawing.Size(63, 20);
+            this.lblPp2.TabIndex = 3;
+            this.lblPp2.Text = "0";
+            this.lblPp2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label39
             // 
@@ -1076,16 +1076,16 @@
             this.label39.TabIndex = 2;
             this.label39.Text = "P\'\':";
             // 
-            // label40
+            // lblPp1
             // 
-            this.label40.BackColor = System.Drawing.SystemColors.Control;
-            this.label40.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label40.Location = new System.Drawing.Point(40, 16);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(63, 20);
-            this.label40.TabIndex = 1;
-            this.label40.Text = "0";
-            this.label40.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblPp1.BackColor = System.Drawing.SystemColors.Control;
+            this.lblPp1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblPp1.Location = new System.Drawing.Point(40, 16);
+            this.lblPp1.Name = "lblPp1";
+            this.lblPp1.Size = new System.Drawing.Size(63, 20);
+            this.lblPp1.TabIndex = 1;
+            this.lblPp1.Text = "0";
+            this.lblPp1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label41
             // 
@@ -1103,9 +1103,9 @@
             this.groupBox4.Controls.Add(this.label33);
             this.groupBox4.Controls.Add(this.lblLn);
             this.groupBox4.Controls.Add(this.label31);
-            this.groupBox4.Controls.Add(this.label28);
+            this.groupBox4.Controls.Add(this.lblLl2);
             this.groupBox4.Controls.Add(this.label29);
-            this.groupBox4.Controls.Add(this.label27);
+            this.groupBox4.Controls.Add(this.lblLl1);
             this.groupBox4.Controls.Add(this.label26);
             this.groupBox4.Location = new System.Drawing.Point(14, 48);
             this.groupBox4.Name = "groupBox4";
@@ -1153,16 +1153,16 @@
             this.label31.TabIndex = 4;
             this.label31.Text = "Ln:";
             // 
-            // label28
+            // lblLl2
             // 
-            this.label28.BackColor = System.Drawing.SystemColors.Control;
-            this.label28.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label28.Location = new System.Drawing.Point(40, 44);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(63, 20);
-            this.label28.TabIndex = 3;
-            this.label28.Text = "0";
-            this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblLl2.BackColor = System.Drawing.SystemColors.Control;
+            this.lblLl2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblLl2.Location = new System.Drawing.Point(40, 44);
+            this.lblLl2.Name = "lblLl2";
+            this.lblLl2.Size = new System.Drawing.Size(63, 20);
+            this.lblLl2.TabIndex = 3;
+            this.lblLl2.Text = "0";
+            this.lblLl2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label29
             // 
@@ -1173,16 +1173,16 @@
             this.label29.TabIndex = 2;
             this.label29.Text = "L\'\':";
             // 
-            // label27
+            // lblLl1
             // 
-            this.label27.BackColor = System.Drawing.SystemColors.Control;
-            this.label27.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label27.Location = new System.Drawing.Point(40, 16);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(63, 20);
-            this.label27.TabIndex = 1;
-            this.label27.Text = "0";
-            this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblLl1.BackColor = System.Drawing.SystemColors.Control;
+            this.lblLl1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblLl1.Location = new System.Drawing.Point(40, 16);
+            this.lblLl1.Name = "lblLl1";
+            this.lblLl1.Size = new System.Drawing.Size(63, 20);
+            this.lblLl1.TabIndex = 1;
+            this.lblLl1.Text = "0";
+            this.lblLl1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label26
             // 
@@ -1261,13 +1261,13 @@
             // groupBox9
             // 
             this.groupBox9.AutoSize = true;
-            this.groupBox9.Controls.Add(this.label78);
+            this.groupBox9.Controls.Add(this.lblCorPintura);
             this.groupBox9.Controls.Add(this.label79);
-            this.groupBox9.Controls.Add(this.label80);
+            this.groupBox9.Controls.Add(this.lblPesoMola);
             this.groupBox9.Controls.Add(this.label81);
-            this.groupBox9.Controls.Add(this.label82);
+            this.groupBox9.Controls.Add(this.lblBarraEnrolar);
             this.groupBox9.Controls.Add(this.label83);
-            this.groupBox9.Controls.Add(this.label84);
+            this.groupBox9.Controls.Add(this.lblBarraTeste);
             this.groupBox9.Controls.Add(this.label85);
             this.groupBox9.Location = new System.Drawing.Point(230, 351);
             this.groupBox9.Name = "groupBox9";
@@ -1276,16 +1276,16 @@
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "DADOS PRODUÇÃO:";
             // 
-            // label78
+            // lblCorPintura
             // 
-            this.label78.BackColor = System.Drawing.SystemColors.Control;
-            this.label78.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label78.Location = new System.Drawing.Point(567, 20);
-            this.label78.Name = "label78";
-            this.label78.Size = new System.Drawing.Size(63, 20);
-            this.label78.TabIndex = 7;
-            this.label78.Text = "0";
-            this.label78.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblCorPintura.BackColor = System.Drawing.SystemColors.Control;
+            this.lblCorPintura.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblCorPintura.Location = new System.Drawing.Point(567, 20);
+            this.lblCorPintura.Name = "lblCorPintura";
+            this.lblCorPintura.Size = new System.Drawing.Size(63, 20);
+            this.lblCorPintura.TabIndex = 7;
+            this.lblCorPintura.Text = "0";
+            this.lblCorPintura.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label79
             // 
@@ -1296,16 +1296,16 @@
             this.label79.TabIndex = 6;
             this.label79.Text = "Cor pintura:";
             // 
-            // label80
+            // lblPesoMola
             // 
-            this.label80.BackColor = System.Drawing.SystemColors.Control;
-            this.label80.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label80.Location = new System.Drawing.Point(425, 20);
-            this.label80.Name = "label80";
-            this.label80.Size = new System.Drawing.Size(63, 20);
-            this.label80.TabIndex = 5;
-            this.label80.Text = "0";
-            this.label80.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblPesoMola.BackColor = System.Drawing.SystemColors.Control;
+            this.lblPesoMola.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblPesoMola.Location = new System.Drawing.Point(425, 20);
+            this.lblPesoMola.Name = "lblPesoMola";
+            this.lblPesoMola.Size = new System.Drawing.Size(63, 20);
+            this.lblPesoMola.TabIndex = 5;
+            this.lblPesoMola.Text = "0";
+            this.lblPesoMola.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label81
             // 
@@ -1316,16 +1316,16 @@
             this.label81.TabIndex = 4;
             this.label81.Text = "Peso Unidade(Kg):";
             // 
-            // label82
+            // lblBarraEnrolar
             // 
-            this.label82.BackColor = System.Drawing.SystemColors.Control;
-            this.label82.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label82.Location = new System.Drawing.Point(263, 19);
-            this.label82.Name = "label82";
-            this.label82.Size = new System.Drawing.Size(63, 20);
-            this.label82.TabIndex = 3;
-            this.label82.Text = "0";
-            this.label82.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblBarraEnrolar.BackColor = System.Drawing.SystemColors.Control;
+            this.lblBarraEnrolar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblBarraEnrolar.Location = new System.Drawing.Point(263, 19);
+            this.lblBarraEnrolar.Name = "lblBarraEnrolar";
+            this.lblBarraEnrolar.Size = new System.Drawing.Size(63, 20);
+            this.lblBarraEnrolar.TabIndex = 3;
+            this.lblBarraEnrolar.Text = "0";
+            this.lblBarraEnrolar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label83
             // 
@@ -1336,16 +1336,16 @@
             this.label83.TabIndex = 2;
             this.label83.Text = "Barra para enrolar:";
             // 
-            // label84
+            // lblBarraTeste
             // 
-            this.label84.BackColor = System.Drawing.SystemColors.Control;
-            this.label84.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label84.Location = new System.Drawing.Point(104, 19);
-            this.label84.Name = "label84";
-            this.label84.Size = new System.Drawing.Size(63, 20);
-            this.label84.TabIndex = 1;
-            this.label84.Text = "0";
-            this.label84.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblBarraTeste.BackColor = System.Drawing.SystemColors.Control;
+            this.lblBarraTeste.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblBarraTeste.Location = new System.Drawing.Point(104, 19);
+            this.lblBarraTeste.Name = "lblBarraTeste";
+            this.lblBarraTeste.Size = new System.Drawing.Size(63, 20);
+            this.lblBarraTeste.TabIndex = 1;
+            this.lblBarraTeste.Text = "0";
+            this.lblBarraTeste.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label85
             // 
@@ -1500,7 +1500,7 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox txtTmax;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmbLinhaAuto;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.GroupBox groupBox3;
@@ -1513,22 +1513,22 @@
         private System.Windows.Forms.TextBox txtConsElast;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label lblPbl;
         private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label lblPn;
         private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label lblPp2;
         private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label lblPp1;
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label lblLbl;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label lblLn;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label lblLl2;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label lblLl1;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.Label lblS2;
@@ -1544,22 +1544,22 @@
         private System.Windows.Forms.Label label59;
         private System.Windows.Forms.Label label60;
         private System.Windows.Forms.Label label61;
-        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.Label lblTbl;
         private System.Windows.Forms.Label label51;
-        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.Label lblTn;
         private System.Windows.Forms.Label label53;
-        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.Label lblTt2;
         private System.Windows.Forms.Label label55;
-        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.Label lblTt1;
         private System.Windows.Forms.Label label57;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Label lblSbl;
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.Label lblSn;
         private System.Windows.Forms.Label label45;
-        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label lblSs2;
         private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.Label lblSs1;
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.Label lblStatusT2;
         private System.Windows.Forms.Label lblStatusT1;
@@ -1571,13 +1571,13 @@
         private System.Windows.Forms.TextBox txtMandril;
         private System.Windows.Forms.Label label77;
         private System.Windows.Forms.GroupBox groupBox9;
-        private System.Windows.Forms.Label label78;
+        private System.Windows.Forms.Label lblCorPintura;
         private System.Windows.Forms.Label label79;
-        private System.Windows.Forms.Label label80;
+        private System.Windows.Forms.Label lblPesoMola;
         private System.Windows.Forms.Label label81;
-        private System.Windows.Forms.Label label82;
+        private System.Windows.Forms.Label lblBarraEnrolar;
         private System.Windows.Forms.Label label83;
-        private System.Windows.Forms.Label label84;
+        private System.Windows.Forms.Label lblBarraTeste;
         private System.Windows.Forms.Label label85;
         private System.Windows.Forms.TextBox txtAco;
         private System.Windows.Forms.Label label87;

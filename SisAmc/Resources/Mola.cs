@@ -100,6 +100,7 @@ namespace SisAmc.Resources
             if (vW < 4 || vW >20)
             {
                 return false;
+                
             }
             else
             {
@@ -216,32 +217,42 @@ namespace SisAmc.Resources
 
         public float calcSs1(float calcSn)
         {
-            float vSs1;
+            
+
+            float valor = calcSn; // valor original
+            float percentual =  Convert.ToSingle( 30 / 100.0); // 
+            float valor_final = valor * percentual;
+
+             float vSs1 =  valor_final  ;
 
 
-            return vSs1 = calcSn * Convert.ToSingle(0.3);
+            
+            return vSs1;
         }
 
         public float calcSs2(float calcSn)
         {
-            float vSs2;
-                 
+            
+            float valor = calcSn;
+            float percentual = Convert.ToSingle(70 / 100.0);
+            float valor_final = valor * percentual;
+            float vSs2 = valor_final;
 
-            return vSs2 = calcSn * Convert.ToSingle( 0.7);
+            return vSs2  ;
         }
 
         public float calcLl1(float AlturaLivre, float calcSs1)
         {
             float vLl1;
 
-            return vLl1 = AlturaLivre + calcSs1;
+            return vLl1 = AlturaLivre - calcSs1;
         }
 
         public float calcLl2(float AlturaLivre, float calcSs2)
         {
             float vLl2;
             
-            return vLl2 = AlturaLivre + calcSs2;
+            return vLl2 = AlturaLivre - calcSs2;
         }
 
         public float calcPbl(float calcSbl, float calcConstElast)
@@ -283,7 +294,8 @@ namespace SisAmc.Resources
             vPbl = calcPbl;
             vd = DiametroArame;
 
-            vTbl = (8 * vDm * vPbl) / (Convert.ToSingle(Math.PI) * vd *  3);
+            vTbl = (8 * vDm * vPbl) / (Convert.ToSingle(Math.PI) * Convert.ToSingle(Math.Pow(vd, 3)));
+            //vTbl = (8 * vDm * vPbl) / (Convert.ToSingle(Math.PI) * vd *  3);
 
 
             return vTbl;
@@ -296,7 +308,8 @@ namespace SisAmc.Resources
             vPn = calcPn;
             vd = DiametroArame;
 
-            vTn = (8 * vDm * vPn) / (Convert.ToSingle(Math.PI) * vd * 3);
+            vTn = (8 * vDm * vPn) / (Convert.ToSingle(Math.PI) * Convert.ToSingle(Math.Pow(vd, 3)));
+            //vTn = (8 * vDm * vPn) / (Convert.ToSingle(Math.PI) * vd * 3);
 
 
             return vTn;
@@ -309,7 +322,7 @@ namespace SisAmc.Resources
             vPp1 = calcPp1;
             vd = DiametroArame;
 
-            vTt1 = (8 * vDm * vPp1) / (Convert.ToSingle(Math.PI) * vd * 3);
+            vTt1 = (8 * vDm * vPp1) / (Convert.ToSingle(Math.PI) * Convert.ToSingle( Math.Pow( vd, 3)));
 
 
             return vTt1;
@@ -322,7 +335,8 @@ namespace SisAmc.Resources
             vPp2 = calcPp2;
             vd = DiametroArame;
 
-            vTt2 = (8 * vDm * vPp2) / (Convert.ToSingle(Math.PI) * vd * 3);
+            vTt2 = (8 * vDm * vPp2) / (Convert.ToSingle(Math.PI) * Convert.ToSingle(Math.Pow(vd, 3)));
+            //vTt2 = (8 * vDm * vPp2) / (Convert.ToSingle(Math.PI) * vd * 3);
 
 
             return vTt2;
@@ -346,14 +360,20 @@ namespace SisAmc.Resources
             return  vBarraEnrolar = calcCompFinal + 250;
         }
 
-        public float calcPesoUnid(float DiamentroArame, float calcCompFinal)
+        public double calcPesoUnid(float DiamentroArame, float calcCompFinal)
         {
-            float vd, vCompFinal, vPesoUnid, vPi;
+            double vd, vCompFinal, vPesoUnid, vPi;
             vd = DiamentroArame;
             vCompFinal = calcCompFinal;
-            vPi = Convert.ToSingle(Math.PI);
+            
+            vPesoUnid = (((((     Math.Pow((vd/2), 2)) * Math.PI) * 7.85) / Math.Pow(10, 3)) * vCompFinal / Math.Pow(10, 3));
 
-            Double p1, p2, p3, p4, p5, p6, p7, p8, p9;
+
+
+
+
+
+            /*  Double p1, p2, p3, p4, p5, p6, p7, p8, p9;
 
             p1 = vd / 2;
 
@@ -371,12 +391,15 @@ namespace SisAmc.Resources
 
             p8 = p5;
 
-            p9 = p7 / p8;
+            p9 = p7 / p8; */
 
 
             //Não sei se essa formula vai dar certo ou errado...
 
-            vPesoUnid = Convert.ToSingle(p9);
+            // NO EXCEL O PESO UNITARIO DE UMA MOLA É CALCULADO ASSIM: 
+            // = (((((( vd /2 )^2 )*PI() ) * 7,85 ) / 10^3 )* vCompFinal   / 10^3)
+
+            
         
 
 

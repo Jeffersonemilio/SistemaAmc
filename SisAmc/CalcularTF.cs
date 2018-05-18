@@ -21,6 +21,11 @@ namespace SisAmc
             cmbSentHelice.Items.Insert(0, "Esquerda");
             cmbSentHelice.Items.Insert(1, "Direita");
 
+            cmbLinhaAuto.Items.Insert(0, "Blindado");
+            cmbLinhaAuto.Items.Insert(1, "Esportiva");
+            cmbLinhaAuto.Items.Insert(2, "Convencional");
+            cmbLinhaAuto.Items.Insert(3, "Personalizada");
+
         }
         //Instanciando o Objeto Mola
         Mola ObjMola = new Mola();
@@ -37,6 +42,20 @@ namespace SisAmc
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if ( cmbLinhaAuto.SelectedIndex == 0)
+            {
+                lblCorPintura.BackColor = Color.Black;
+            }
+            else if(cmbLinhaAuto.SelectedIndex == 1)
+            {
+                lblCorPintura.BackColor = Color.Blue;
+            }else if(cmbLinhaAuto.SelectedIndex == 2)
+            {
+                lblCorPintura.BackColor = Color.Black;
+            }else if(cmbLinhaAuto.SelectedIndex == 3)
+            {
+                lblCorPintura.BackColor = Color.Orange;
+            }
 
         }
 
@@ -118,8 +137,8 @@ namespace SisAmc
 
 
             string vTf, vAco, vL0, vd, vDi, vIg, vSentHelice;
-            float vDe, vIf, vDm, vCompTotal, vRelEnr, vIndEsb, vConstElast, vLbl, vSa, vLn, vSbl, vSn,
-                vVLo, vVd, vVdi, vVig;
+            float vDe, vIf, vDm, vCompTotal, vRelEnr, vIndEsb, vConstElast, vLbl, vSa, vLn, vSbl, vSn,vSs1, vSs2,
+                vLl1, vLl2, vPbl, vPn, vPp2, vPp1, vTtl, vTn, vTt1, vTt2, vVLo, vVd, vVdi, vVig, vBarraTeste, vBarraEnrolar, VPesoMola;
             bool vCkcRetifica;
 
             vL0 = txtAltLivre.Text;
@@ -167,10 +186,12 @@ namespace SisAmc
 
             if (ObjMola.avaliaRelacEnrolamento(vRelEnr) == false)
             {
+                txtRelEnr.ForeColor = Color.Red;
                 txtRelEnr.Text = "REPROVADO";
             }
             else
             {
+                txtRelEnr.ForeColor = Color.Green;
                 txtRelEnr.Text = "APROVADO";
             }
 
@@ -179,10 +200,12 @@ namespace SisAmc
 
             if (ObjMola.avaliaIndEsbeltez(vIndEsb) == false)
             {
+                txtIndEsb.ForeColor = Color.Red;
                 txtIndEsb.Text = "REPROVADO";
             }
             else
             {
+                txtIndEsb.ForeColor = Color.Green;
                 txtIndEsb.Text = "APROVADO";
             }
 
@@ -206,21 +229,77 @@ namespace SisAmc
             lblSn.Text = Convert.ToString(vSn);
 
 
-        
-            
-        
-
-
-
-
-            
-
-                
-                
-
            
 
-            
+           
+            vSs1 = ObjMola.calcSs1(vSn);
+            lblSs1.Text = Convert.ToString(vSs1);
+           
+
+            vSs2 = ObjMola.calcSs2(vSn);
+            lblSs2.Text = Convert.ToString(vSs2);
+
+            vLl1 = ObjMola.calcLl1(vVLo, vSs1);
+            lblLl1.Text = Convert.ToString(vLl1);
+
+            vLl2 = ObjMola.calcLl2(vVLo, vSs2);
+            lblLl2.Text = Convert.ToString(vLl2);
+
+            vPbl = ObjMola.calcPbl(vSbl, vConstElast);
+            lblPbl.Text = Convert.ToString(vPbl);
+
+            vPn = ObjMola.calcPn(vSn, vConstElast);
+            lblPn.Text = Convert.ToString(vPn);
+
+            vPp1 = ObjMola.calcPp1(vSs1, vConstElast);
+            lblPp1.Text = Convert.ToString(vPp1);
+
+            vPp2 = ObjMola.calcPp2(vSs2, vConstElast);
+            lblPp2.Text = Convert.ToString(vPp2);
+
+            vTtl = ObjMola.calcTbl(vDm, vPbl, vVd);
+            lblTbl.Text = Convert.ToString(vTtl);
+
+            vTn = ObjMola.calcTn(vDm, vPn, vVd);
+            lblTn.Text = Convert.ToString(vTn);
+
+            vTt1 = ObjMola.calcTt1(vDm, vPp1, vVd);
+            lblTt1.Text = Convert.ToString(vTt1);
+
+            vTt2 = ObjMola.calcTt1(vDm, vPp2, vVd);
+            lblTt2.Text = Convert.ToString(vTt2);
+
+            vBarraTeste = ObjMola.calcBarraTest(vDm, vCompTotal);
+            lblBarraTeste.Text = Convert.ToString(vBarraTeste);
+
+            vBarraEnrolar = ObjMola.calcBarraEnrolar(vCompTotal);
+            lblBarraEnrolar.Text = Convert.ToString(vBarraEnrolar);
+
+            VPesoMola =  Convert.ToSingle(  ObjMola.calcPesoUnid(vVd, vCompTotal));
+            lblPesoMola.Text = Convert.ToString(VPesoMola);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         }
 
 
@@ -276,7 +355,7 @@ namespace SisAmc
 
         private void cmbSentHelice_SelectedIndexChanged(object sender, EventArgs e)
         {
-           // checkedListBox1.Items.Insert(0, "Copenhagen");
+            //checkedListBox1.Items.Insert(0, "Copenhagen");
             
         }
     }
