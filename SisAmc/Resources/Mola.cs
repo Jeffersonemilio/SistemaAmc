@@ -369,7 +369,7 @@ namespace SisAmc.Resources
             vPesoUnid = (((((     Math.Pow((vd/2), 2)) * Math.PI) * 7.85) / Math.Pow(10, 3)) * vCompFinal / Math.Pow(10, 3));
 
 
-
+            
 
 
 
