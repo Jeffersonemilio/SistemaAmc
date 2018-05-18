@@ -210,7 +210,7 @@
             this.txtAco.Location = new System.Drawing.Point(110, 50);
             this.txtAco.Name = "txtAco";
             this.txtAco.Size = new System.Drawing.Size(57, 20);
-            this.txtAco.TabIndex = 31;
+            this.txtAco.TabIndex = 0;
             this.txtAco.Text = "5160";
             this.txtAco.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -228,7 +228,7 @@
             this.txtTf.Location = new System.Drawing.Point(109, 24);
             this.txtTf.Name = "txtTf";
             this.txtTf.Size = new System.Drawing.Size(57, 20);
-            this.txtTf.TabIndex = 29;
+            this.txtTf.TabIndex = 1;
             // 
             // label86
             // 
@@ -253,7 +253,7 @@
             this.txtMandril.Location = new System.Drawing.Point(110, 360);
             this.txtMandril.Name = "txtMandril";
             this.txtMandril.Size = new System.Drawing.Size(57, 20);
-            this.txtMandril.TabIndex = 26;
+            this.txtMandril.TabIndex = 9;
             // 
             // label77
             // 
@@ -279,7 +279,7 @@
             this.txtDiamMedio.Location = new System.Drawing.Point(111, 206);
             this.txtDiamMedio.Name = "txtDiamMedio";
             this.txtDiamMedio.Size = new System.Drawing.Size(57, 20);
-            this.txtDiamMedio.TabIndex = 23;
+            this.txtDiamMedio.TabIndex = 0;
             // 
             // label16
             // 
@@ -304,7 +304,7 @@
             this.txtEspUteis.Location = new System.Drawing.Point(112, 268);
             this.txtEspUteis.Name = "txtEspUteis";
             this.txtEspUteis.Size = new System.Drawing.Size(57, 20);
-            this.txtEspUteis.TabIndex = 20;
+            this.txtEspUteis.TabIndex = 0;
             // 
             // label14
             // 
@@ -329,7 +329,7 @@
             this.txtDiamExterno.Location = new System.Drawing.Point(111, 179);
             this.txtDiamExterno.Name = "txtDiamExterno";
             this.txtDiamExterno.Size = new System.Drawing.Size(57, 20);
-            this.txtDiamExterno.TabIndex = 17;
+            this.txtDiamExterno.TabIndex = 0;
             // 
             // label12
             // 
@@ -347,7 +347,7 @@
             this.cmbSentHelice.Location = new System.Drawing.Point(110, 327);
             this.cmbSentHelice.Name = "cmbSentHelice";
             this.cmbSentHelice.Size = new System.Drawing.Size(95, 21);
-            this.cmbSentHelice.TabIndex = 15;
+            this.cmbSentHelice.TabIndex = 7;
             this.cmbSentHelice.SelectedIndexChanged += new System.EventHandler(this.cmbSentHelice_SelectedIndexChanged);
             // 
             // label10
@@ -366,7 +366,7 @@
             this.ckcRetificada.Location = new System.Drawing.Point(109, 299);
             this.ckcRetificada.Name = "ckcRetificada";
             this.ckcRetificada.Size = new System.Drawing.Size(15, 14);
-            this.ckcRetificada.TabIndex = 13;
+            this.ckcRetificada.TabIndex = 6;
             this.ckcRetificada.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ckcRetificada.UseVisualStyleBackColor = true;
             // 
@@ -393,7 +393,7 @@
             this.txtEspTotais.Location = new System.Drawing.Point(110, 235);
             this.txtEspTotais.Name = "txtEspTotais";
             this.txtEspTotais.Size = new System.Drawing.Size(57, 20);
-            this.txtEspTotais.TabIndex = 10;
+            this.txtEspTotais.TabIndex = 5;
             // 
             // label8
             // 
@@ -418,7 +418,7 @@
             this.txtDiamInterno.Location = new System.Drawing.Point(111, 147);
             this.txtDiamInterno.Name = "txtDiamInterno";
             this.txtDiamInterno.Size = new System.Drawing.Size(57, 20);
-            this.txtDiamInterno.TabIndex = 7;
+            this.txtDiamInterno.TabIndex = 4;
             // 
             // label6
             // 
@@ -443,7 +443,7 @@
             this.txtDiamArame.Location = new System.Drawing.Point(111, 121);
             this.txtDiamArame.Name = "txtDiamArame";
             this.txtDiamArame.Size = new System.Drawing.Size(57, 20);
-            this.txtDiamArame.TabIndex = 4;
+            this.txtDiamArame.TabIndex = 3;
             // 
             // label4
             // 
@@ -468,7 +468,7 @@
             this.txtAltLivre.Location = new System.Drawing.Point(111, 94);
             this.txtAltLivre.Name = "txtAltLivre";
             this.txtAltLivre.Size = new System.Drawing.Size(57, 20);
-            this.txtAltLivre.TabIndex = 1;
+            this.txtAltLivre.TabIndex = 2;
             // 
             // label1
             // 
@@ -512,7 +512,7 @@
             this.cmbLinhaAuto.Location = new System.Drawing.Point(488, 21);
             this.cmbLinhaAuto.Name = "cmbLinhaAuto";
             this.cmbLinhaAuto.Size = new System.Drawing.Size(91, 21);
-            this.cmbLinhaAuto.TabIndex = 31;
+            this.cmbLinhaAuto.TabIndex = 8;
             this.cmbLinhaAuto.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // label23
@@ -548,7 +548,7 @@
             this.txtModTorcao.Location = new System.Drawing.Point(209, 21);
             this.txtModTorcao.Name = "txtModTorcao";
             this.txtModTorcao.Size = new System.Drawing.Size(57, 20);
-            this.txtModTorcao.TabIndex = 23;
+            this.txtModTorcao.TabIndex = 0;
             // 
             // label20
             // 
@@ -564,7 +564,7 @@
             this.txtTmax.Location = new System.Drawing.Point(45, 21);
             this.txtTmax.Name = "txtTmax";
             this.txtTmax.Size = new System.Drawing.Size(57, 20);
-            this.txtTmax.TabIndex = 20;
+            this.txtTmax.TabIndex = 0;
             // 
             // label18
             // 
@@ -1198,7 +1198,7 @@
             this.txtIndEsb.Location = new System.Drawing.Point(566, 22);
             this.txtIndEsb.Name = "txtIndEsb";
             this.txtIndEsb.Size = new System.Drawing.Size(73, 20);
-            this.txtIndEsb.TabIndex = 7;
+            this.txtIndEsb.TabIndex = 0;
             // 
             // label21
             // 
@@ -1215,7 +1215,7 @@
             this.txtRelEnr.Location = new System.Drawing.Point(389, 23);
             this.txtRelEnr.Name = "txtRelEnr";
             this.txtRelEnr.Size = new System.Drawing.Size(73, 20);
-            this.txtRelEnr.TabIndex = 5;
+            this.txtRelEnr.TabIndex = 0;
             // 
             // label25
             // 
@@ -1231,7 +1231,7 @@
             this.txtSa.Location = new System.Drawing.Point(225, 23);
             this.txtSa.Name = "txtSa";
             this.txtSa.Size = new System.Drawing.Size(73, 20);
-            this.txtSa.TabIndex = 3;
+            this.txtSa.TabIndex = 0;
             // 
             // label19
             // 
@@ -1247,7 +1247,7 @@
             this.txtConsElast.Location = new System.Drawing.Point(110, 24);
             this.txtConsElast.Name = "txtConsElast";
             this.txtConsElast.Size = new System.Drawing.Size(73, 20);
-            this.txtConsElast.TabIndex = 1;
+            this.txtConsElast.TabIndex = 0;
             // 
             // label17
             // 
@@ -1375,7 +1375,7 @@
             this.btnConsultar.Location = new System.Drawing.Point(659, 24);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(182, 38);
-            this.btnConsultar.TabIndex = 3;
+            this.btnConsultar.TabIndex = 14;
             this.btnConsultar.Text = "CONSULTAR TF";
             this.btnConsultar.UseVisualStyleBackColor = true;
             // 
@@ -1384,7 +1384,7 @@
             this.btnSalvar.Location = new System.Drawing.Point(440, 24);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(182, 38);
-            this.btnSalvar.TabIndex = 2;
+            this.btnSalvar.TabIndex = 13;
             this.btnSalvar.Text = "SALVAR";
             this.btnSalvar.UseVisualStyleBackColor = true;
             // 
@@ -1393,7 +1393,7 @@
             this.btnLimpar.Location = new System.Drawing.Point(231, 24);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(178, 38);
-            this.btnLimpar.TabIndex = 1;
+            this.btnLimpar.TabIndex = 12;
             this.btnLimpar.Text = "LIMPAR CAMPOS";
             this.btnLimpar.UseVisualStyleBackColor = true;
             // 
@@ -1402,7 +1402,7 @@
             this.btnCalcTf.Location = new System.Drawing.Point(16, 24);
             this.btnCalcTf.Name = "btnCalcTf";
             this.btnCalcTf.Size = new System.Drawing.Size(182, 38);
-            this.btnCalcTf.TabIndex = 0;
+            this.btnCalcTf.TabIndex = 11;
             this.btnCalcTf.Text = "CALCULAR";
             this.btnCalcTf.UseVisualStyleBackColor = true;
             this.btnCalcTf.Click += new System.EventHandler(this.button1_Click);
@@ -1425,20 +1425,24 @@
             this.txtObs.Name = "txtObs";
             this.txtObs.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.txtObs.Size = new System.Drawing.Size(852, 63);
-            this.txtObs.TabIndex = 0;
+            this.txtObs.TabIndex = 10;
             // 
             // CalcularTF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(888, 603);
+            this.ClientSize = new System.Drawing.Size(888, 611);
             this.Controls.Add(this.groupBox11);
             this.Controls.Add(this.groupBox10);
             this.Controls.Add(this.groupBox9);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(904, 650);
+            this.MinimumSize = new System.Drawing.Size(904, 650);
             this.Name = "CalcularTF";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CalcularTF";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
