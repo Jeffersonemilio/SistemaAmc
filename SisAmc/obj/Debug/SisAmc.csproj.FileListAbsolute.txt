@@ -81,3 +81,4 @@ C:\Users\Pr Jefferson\Source\Repos\SistemaAMC\SisAmc\obj\Debug\SisAmc.csproj.Cor
 C:\Users\Pr Jefferson\Source\Repos\SistemaAMC\SisAmc\obj\Debug\SisAmc.csproj.CopyComplete
 C:\Users\Pr Jefferson\Source\Repos\SistemaAMC\SisAmc\obj\Debug\SisAmc.exe
 C:\Users\Pr Jefferson\Source\Repos\SistemaAMC\SisAmc\obj\Debug\SisAmc.pdb
+C:\Users\Pr Jefferson\Source\Repos\SistemaAMC\SisAmc\obj\Debug\SisAmc.ListaTF.resources

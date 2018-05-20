@@ -25,7 +25,12 @@ namespace SisAmc
             form1.MdiParent = this;
             form1.Show();
 
-
+            var frmPesquisa = new ListaTF();
+            frmPesquisa.MdiParent = this;
+            frmPesquisa.Show();
+           
+            
+            
             /* CODIGO PARA CRIAR UM FORMILARIO VIA CODIGO, MAS TENHO QUE INVESTIGAR COMO ACRESCENTAR MAIS RECURSOS NELE.
             Form childForm = new Form();
             childForm.MdiParent = this;
@@ -33,6 +38,15 @@ namespace SisAmc
             childForm.Show();
             */
         }
+
+
+        private void ShowNewFormPerquisa(object sender, EventArgs e)
+        {
+            var frmPesquisa = new ListaTF();
+            frmPesquisa.MdiParent = this;
+            frmPesquisa.Show();
+        }
+       
 
         private void OpenFile(object sender, EventArgs e)
         {

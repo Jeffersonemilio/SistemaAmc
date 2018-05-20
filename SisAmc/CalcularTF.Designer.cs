@@ -1378,6 +1378,7 @@
             this.btnConsultar.TabIndex = 14;
             this.btnConsultar.Text = "CONSULTAR TF";
             this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // btnSalvar
             // 
@@ -1387,6 +1388,7 @@
             this.btnSalvar.TabIndex = 13;
             this.btnSalvar.Text = "SALVAR";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnLimpar
             // 
@@ -1443,7 +1445,6 @@
             this.MaximumSize = new System.Drawing.Size(904, 650);
             this.MinimumSize = new System.Drawing.Size(904, 650);
             this.Name = "CalcularTF";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CalcularTF";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -433,5 +433,32 @@ namespace SisAmc
 
 
         }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            /* A função desse botão será insertar no banco de dados os valores importantes 
+            aos calculos dessa mola. 
+
+            Sendo esses valores os seguintes campos: 
+
+            - TF
+            - ALTURA LIVRE
+            - DIAMETRO INTERNO
+            - ESPIRAS TOTAIS
+            - RETIFICADA(TRUE/FALSE
+            - SENTIDO HELICE
+            - MANDRIL
+            - OBSERVAÇÕES
+            - LINHA AUTOMOTIVA
+
+             */
+        }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+           
+
+            
+        }
     }
 }
