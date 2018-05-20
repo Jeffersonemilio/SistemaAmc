@@ -88,10 +88,10 @@
             this.lblP1 = new System.Windows.Forms.Label();
             this.label69 = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.label58 = new System.Windows.Forms.Label();
-            this.label59 = new System.Windows.Forms.Label();
-            this.label60 = new System.Windows.Forms.Label();
-            this.label61 = new System.Windows.Forms.Label();
+            this.lblStatusTbl = new System.Windows.Forms.Label();
+            this.lblStatusTn = new System.Windows.Forms.Label();
+            this.lblStatusTt2 = new System.Windows.Forms.Label();
+            this.lblStatusTt1 = new System.Windows.Forms.Label();
             this.lblTbl = new System.Windows.Forms.Label();
             this.label51 = new System.Windows.Forms.Label();
             this.lblTn = new System.Windows.Forms.Label();
@@ -766,10 +766,10 @@
             // groupBox7
             // 
             this.groupBox7.AutoSize = true;
-            this.groupBox7.Controls.Add(this.label58);
-            this.groupBox7.Controls.Add(this.label59);
-            this.groupBox7.Controls.Add(this.label60);
-            this.groupBox7.Controls.Add(this.label61);
+            this.groupBox7.Controls.Add(this.lblStatusTbl);
+            this.groupBox7.Controls.Add(this.lblStatusTn);
+            this.groupBox7.Controls.Add(this.lblStatusTt2);
+            this.groupBox7.Controls.Add(this.lblStatusTt1);
             this.groupBox7.Controls.Add(this.lblTbl);
             this.groupBox7.Controls.Add(this.label51);
             this.groupBox7.Controls.Add(this.lblTn);
@@ -784,41 +784,41 @@
             this.groupBox7.TabIndex = 12;
             this.groupBox7.TabStop = false;
             // 
-            // label58
+            // lblStatusTbl
             // 
-            this.label58.AutoSize = true;
-            this.label58.Location = new System.Drawing.Point(132, 104);
-            this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(50, 13);
-            this.label58.TabIndex = 11;
-            this.label58.Text = "STATUS";
+            this.lblStatusTbl.AutoSize = true;
+            this.lblStatusTbl.Location = new System.Drawing.Point(132, 104);
+            this.lblStatusTbl.Name = "lblStatusTbl";
+            this.lblStatusTbl.Size = new System.Drawing.Size(50, 13);
+            this.lblStatusTbl.TabIndex = 11;
+            this.lblStatusTbl.Text = "STATUS";
             // 
-            // label59
+            // lblStatusTn
             // 
-            this.label59.AutoSize = true;
-            this.label59.Location = new System.Drawing.Point(132, 76);
-            this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(50, 13);
-            this.label59.TabIndex = 10;
-            this.label59.Text = "STATUS";
+            this.lblStatusTn.AutoSize = true;
+            this.lblStatusTn.Location = new System.Drawing.Point(132, 76);
+            this.lblStatusTn.Name = "lblStatusTn";
+            this.lblStatusTn.Size = new System.Drawing.Size(50, 13);
+            this.lblStatusTn.TabIndex = 10;
+            this.lblStatusTn.Text = "STATUS";
             // 
-            // label60
+            // lblStatusTt2
             // 
-            this.label60.AutoSize = true;
-            this.label60.Location = new System.Drawing.Point(132, 47);
-            this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(50, 13);
-            this.label60.TabIndex = 9;
-            this.label60.Text = "STATUS";
+            this.lblStatusTt2.AutoSize = true;
+            this.lblStatusTt2.Location = new System.Drawing.Point(132, 47);
+            this.lblStatusTt2.Name = "lblStatusTt2";
+            this.lblStatusTt2.Size = new System.Drawing.Size(50, 13);
+            this.lblStatusTt2.TabIndex = 9;
+            this.lblStatusTt2.Text = "STATUS";
             // 
-            // label61
+            // lblStatusTt1
             // 
-            this.label61.AutoSize = true;
-            this.label61.Location = new System.Drawing.Point(132, 19);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(50, 13);
-            this.label61.TabIndex = 8;
-            this.label61.Text = "STATUS";
+            this.lblStatusTt1.AutoSize = true;
+            this.lblStatusTt1.Location = new System.Drawing.Point(132, 19);
+            this.lblStatusTt1.Name = "lblStatusTt1";
+            this.lblStatusTt1.Size = new System.Drawing.Size(50, 13);
+            this.lblStatusTt1.TabIndex = 8;
+            this.lblStatusTt1.Text = "STATUS";
             // 
             // lblTbl
             // 
@@ -1396,6 +1396,7 @@
             this.btnLimpar.TabIndex = 12;
             this.btnLimpar.Text = "LIMPAR CAMPOS";
             this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnCalcTf
             // 
@@ -1544,10 +1545,10 @@
         private System.Windows.Forms.Label lblP1;
         private System.Windows.Forms.Label label69;
         private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.Label label58;
-        private System.Windows.Forms.Label label59;
-        private System.Windows.Forms.Label label60;
-        private System.Windows.Forms.Label label61;
+        private System.Windows.Forms.Label lblStatusTbl;
+        private System.Windows.Forms.Label lblStatusTn;
+        private System.Windows.Forms.Label lblStatusTt2;
+        private System.Windows.Forms.Label lblStatusTt1;
         private System.Windows.Forms.Label lblTbl;
         private System.Windows.Forms.Label label51;
         private System.Windows.Forms.Label lblTn;

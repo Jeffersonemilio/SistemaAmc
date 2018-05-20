@@ -358,5 +358,80 @@ namespace SisAmc
             //checkedListBox1.Items.Insert(0, "Copenhagen");
             
         }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            txtTf.Text = string.Empty;
+            txtAco.Text = string.Empty;
+            txtAltLivre.Text = string.Empty;
+            txtDiamArame.Text = string.Empty;
+            txtDiamInterno.Text = string.Empty;
+            txtDiamExterno.Text = string.Empty;
+            txtDiamMedio.Text = string.Empty;
+            txtEspTotais.Text = string.Empty;
+            txtEspUteis.Text = string.Empty;
+            ckcRetificada.Checked = false;
+            //cmSentHelice
+            txtMandril.Text = string.Empty;
+            txtObs.Text = string.Empty;
+            txtTmax.Text = string.Empty;
+            txtModTorcao.Text = string.Empty;
+            txtConsElast.Text = string.Empty;
+            txtSa.Text = string.Empty;
+            txtRelEnr.Text = string.Empty;
+            txtIndEsb.Text = string.Empty;
+            //cmbLinhaAuto
+
+            lblLl1.Text = string.Empty;
+            lblLl2.Text = string.Empty;
+            lblLn.Text = string.Empty;
+            lblLbl.Text = string.Empty;
+
+            lblPp1.Text = string.Empty;
+            lblPp2.Text = string.Empty;
+            lblPn.Text = string.Empty;
+            lblPbl.Text = string.Empty;
+
+            lblSs1.Text = string.Empty;
+            lblSs2.Text = string.Empty;
+            lblSn.Text = string.Empty;
+            lblSbl.Text = string.Empty;
+
+            lblTt1.Text = string.Empty;
+            lblTt2.Text = string.Empty;
+            lblTn.Text = string.Empty;
+            lblTbl.Text = string.Empty;
+
+            lblStatusTt1.Text = string.Empty;
+            lblStatusTt2.Text = string.Empty;
+            lblStatusTn.Text = string.Empty;
+            lblStatusTbl.Text = string.Empty;
+
+            lblP1.Text = string.Empty;
+            lblP2.Text = string.Empty;
+
+            lblS1.Text = string.Empty;
+            lblS2.Text = string.Empty;
+
+            lblT1.Text = string.Empty;
+            lblT2.Text = string.Empty;
+
+
+            lblStatusT1.Text = string.Empty;
+            lblStatusT2.Text = string.Empty;
+
+            lblBarraEnrolar.Text = string.Empty;
+            lblBarraTeste.Text = string.Empty;
+            lblRelCompFinal.Text = string.Empty;
+            lblCorPintura.Text = string.Empty;
+            lblPesoMola.Text = string.Empty;
+            lblCorPintura.BackColor = Control.DefaultBackColor;
+
+
+
+
+
+
+        }
     }
 }
