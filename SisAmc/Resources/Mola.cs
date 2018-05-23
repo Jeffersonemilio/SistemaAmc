@@ -408,32 +408,74 @@ namespace SisAmc.Resources
 
         public float calcS1(float calcSs1)
         {
-            return 0;
+            float vSs1, vS1;
+            vSs1 = calcSs1;
+            vS1 = calcSs1 + (calcSs1 * 0.05f);
+
+
+            return vS1;
         }
 
         public float calcS2(float calcSs2)
         {
-            return 0;
+            float vSs2, vS2;
+            vSs2 = calcSs2;
+            vS2= calcSs2 + (calcSs2 * 0.1f);
+
+
+            return vS2;
         }
 
         public float calcP1(float calcSs1, float calcConstElast)
         {
-            return 0;
+            float vSs1, vCalcCont, vP1;
+            vSs1 = calcSs1;
+            vCalcCont = calcConstElast;
+            vP1 = vSs1 * vCalcCont;
+
+
+            return vP1;
         }
 
-        public void calcP2(float calcSs2, float calcConstElast)
+        public float calcP2(float calcSs2, float calcConstElast)
         {
+            float vSs2, vCalcCont, vP2;
+            vSs2 = calcSs2;
+            vCalcCont = calcConstElast;
+            vP2 = vSs2 * vCalcCont;
+
+
+            return vP2;
+
 
         }
 
-        public float calcT1(float DiametroMedio, float calcP1, float DiametroArame)
+        public double calcT1(float DiametroMedio, float calcP1, float DiametroArame)
         {
-            return 0;
+            double vDm, vP1, vd, vT1;
+            vDm = DiametroMedio;
+            vP1 = calcP1;
+            vd = DiametroArame;
+
+            vT1 = (8 * vDm * vP1) / (Math.PI * Math.Pow(vd, 3));
+           
+
+            //Retorna Double
+            return vT1;
         }
 
-        public float calcT2(float DiametroMedio, float calcP2, float DiametroArame)
+        public double calcT2(float DiametroMedio, float calcP2, float DiametroArame)
         {
-            return 0;
+            double vDm, vP2, vd, vT2;
+            vDm = DiametroMedio;
+            vP2 = calcP2;
+            vd = DiametroArame;
+
+            vT2 = (8 * vDm * vP2) / (Math.PI * Math.Pow(vd, 3));
+
+
+            //Retorna Double
+            return vT2;
         }
 
         public bool avaliaT(float calcTbl, float calcTn, float calcTt1, float calcTt2, float calcT1, float calcT2)
