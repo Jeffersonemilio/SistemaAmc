@@ -408,20 +408,26 @@ namespace SisAmc.Resources
 
         public float calcS1(float calcSs1)
         {
-            float vSs1, vS1;
+            
+            float vSs1, vS1, valor;
             vSs1 = calcSs1;
-            vS1 = calcSs1 + (calcSs1 * 0.05f);
-
+            valor = vSs1;
+            float percentual = Convert.ToSingle(0.05 / 100.0);
+            
+            float valor_final = valor + (percentual * valor);
+             vS1 = valor_final;
 
             return vS1;
         }
 
         public float calcS2(float calcSs2)
         {
-            float vSs2, vS2;
+            float vSs2, vS2, valor;
             vSs2 = calcSs2;
-            vS2= calcSs2 + (calcSs2 * 0.1f);
-
+            valor = vSs2;
+            float percentual = Convert.ToSingle(10 / 100.0);
+            float valor_final = calcSs2 - (percentual * valor );
+            vS2 = valor_final;
 
             return vS2;
         }
@@ -478,9 +484,77 @@ namespace SisAmc.Resources
             return vT2;
         }
 
-        public bool avaliaT(float calcTbl, float calcTn, float calcTt1, float calcTt2, float calcT1, float calcT2)
+        public bool[] avaliaT(float calcTbl, float calcTn, float calcTt1, float calcTt2, float calcT1, float calcT2)
         {
-            return false;
+
+           
+            float vTbl, vTn, vTt1, vTt2, vT1, vT2;
+
+            vTbl = calcTbl;
+            vTn = calcTn;
+            vTt1 = calcTt1;
+            vTt2 = calcTt2;
+            vT1 = calcT1;
+            vT2 = calcT2;
+
+            bool[] array = new bool[6];
+
+            if (vTbl < 100)
+            {
+                array[0] = true;
+            }
+            else
+            {
+                array[0] = false;
+            }
+
+            if (vTn < 100)
+            {
+                array[1] = true;
+            }
+            else
+            {
+                array[1] = false;
+            }
+
+            if (vTt1 < 100)
+            {
+                array[2] = true;
+            }
+            else
+            {
+                array[2] = false;
+            }
+
+            if (vTt2 < 100)
+            {
+                array[3] = true;
+            }
+            else
+            {
+                array[3] = false;
+            }
+
+            if (vT1 < 100)
+            {
+                array[4] = true;
+            }
+            else
+            {
+                array[4] = false;
+            }
+
+            if (vT2 < 100)
+            {
+                array[5] = true;
+            }
+            else
+            {
+                array[5] = false;
+            }
+
+
+            return array;
         }
 
     }

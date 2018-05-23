@@ -125,21 +125,23 @@ namespace SisAmc
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
             ///////// VALIDAÇÃO DOS CAMPOS///////////
             Boolean vValidacao = verificaCampos();
-               if(vValidacao == false)
-                {
-                    return;
-                }
+            if (vValidacao == false)
+            {
+                return;
+            }
             /////////////////////////////////////////
-            
+
 
 
             string vTf, vAco, vL0, vd, vDi, vIg, vSentHelice;
-            float vDe, vIf, vDm, vCompTotal, vRelEnr, vIndEsb, vConstElast, vLbl, vSa, vLn, vSbl, vSn,vSs1, vSs2,
-                vLl1, vLl2, vPbl, vPn, vPp2, vPp1, vTtl, vTn, vTt1, vTt2, vVLo, vVd, vVdi, vVig, vBarraTeste, vBarraEnrolar, VPesoMola;
+            float vDe, vIf, vDm, vCompTotal, vRelEnr, vIndEsb, vConstElast, vLbl, vSa, vLn, vSbl, vSn, vSs1, vSs2,
+                vLl1, vLl2, vPbl, vPn, vPp2, vPp1, vTtl, vTn, vTt1, vTt2, vVLo, vVd, vVdi, vVig, vBarraTeste, vBarraEnrolar, VPesoMola, vP1, vP2,
+                vS1, vS2, vT1, vT2;
             bool vCkcRetifica;
+            bool[] vValidaT;
 
             vL0 = txtAltLivre.Text;
             vVLo = converteCampos(vL0);
@@ -159,7 +161,7 @@ namespace SisAmc
 
 
 
-            if(vVLo == 0 || vVd == 0 || vVdi == 0 || vVig == 0)
+            if (vVLo == 0 || vVd == 0 || vVdi == 0 || vVig == 0)
             {
                 MessageBox.Show(Convert.ToString("Valor digitado invalido, por favor revise os valores digitados"));
                 return;
@@ -167,7 +169,7 @@ namespace SisAmc
 
             MessageBox.Show("Conversão ok");
 
-       
+
             vDe = ObjMola.calcDiamExt(vVdi, vVd);
             txtDiamExterno.Text = Convert.ToString(vDe);
 
@@ -209,7 +211,7 @@ namespace SisAmc
                 txtIndEsb.Text = "APROVADO";
             }
 
-             
+
             vConstElast = Convert.ToSingle(ObjMola.calcConstElast(100, vVd, vDm, vIf));
             txtConsElast.Text = Convert.ToString(vConstElast);
 
@@ -229,12 +231,12 @@ namespace SisAmc
             lblSn.Text = Convert.ToString(vSn);
 
 
-           
 
-           
+
+
             vSs1 = ObjMola.calcSs1(vSn);
             lblSs1.Text = Convert.ToString(vSs1);
-           
+
 
             vSs2 = ObjMola.calcSs2(vSn);
             lblSs2.Text = Convert.ToString(vSs2);
@@ -275,16 +277,96 @@ namespace SisAmc
             vBarraEnrolar = ObjMola.calcBarraEnrolar(vCompTotal);
             lblBarraEnrolar.Text = Convert.ToString(vBarraEnrolar);
 
-            VPesoMola =  Convert.ToSingle(  ObjMola.calcPesoUnid(vVd, vCompTotal));
+            VPesoMola = Convert.ToSingle(ObjMola.calcPesoUnid(vVd, vCompTotal));
             lblPesoMola.Text = Convert.ToString(VPesoMola);
 
+            vS1 = ObjMola.calcS1(vSs1);
+            lblS1.Text = Convert.ToString(vS1);
+
+            //Corregir calculo
+            vS2 = ObjMola.calcS2(vSs2);
+            lblS2.Text = Convert.ToString(vS2);
+
+            vP1 = ObjMola.calcP1(vSs1, vConstElast);
+            lblP1.Text = Convert.ToString(vP1);
+
+            vP2 = ObjMola.calcP2(vSs2, vConstElast);
+            lblP2.Text = Convert.ToString(vP2);
 
 
+            vT1 = Convert.ToSingle(ObjMola.calcT1(vDm, vP1, vVd));
+            lblT1.Text = Convert.ToString(vT1);
+
+            vT2 = Convert.ToSingle(ObjMola.calcT2(vDm, vP2, vVd));
+            lblT2.Text = Convert.ToString(vT2);
 
 
+            vValidaT = ObjMola.avaliaT(vTtl, vTn, vTt1, vTt2, vT1, vT2);
+            if (  vValidaT[0] == true)
+            {
+                lblStatusTbl.ForeColor = Color.Green;
+                lblStatusTbl.Text ="APROVADA";
+            }
+            else
+            {
+                lblStatusTbl.ForeColor = Color.Red;
+                lblStatusTbl.Text = "REPROVADA";
+            }
 
+            if (vValidaT[1] == true)
+            {
+                lblStatusTn.ForeColor = Color.Green;
+                lblStatusTn.Text = "APROVADA";
+            }
+            else
+            {
+                lblStatusTn.ForeColor = Color.Red;
+                lblStatusTn.Text = "REPROVADA";
+            }
 
+            if (vValidaT[2] == true)
+            {
+                lblStatusTt1.ForeColor = Color.Green;
+                lblStatusTt1.Text = "APROVADA";
+            }
+            else
+            {
+                lblStatusTt1.ForeColor = Color.Red;
+                lblStatusTt1.Text = "REPROVADA";
+            }
 
+            if (vValidaT[3] == true)
+            {
+                lblStatusTt2.ForeColor = Color.Green;
+                lblStatusTt2.Text = "APROVADA";
+            }
+            else
+            {
+                lblStatusTt2.ForeColor = Color.Red;
+                lblStatusTt2.Text = "REPROVADA";
+            }
+
+            if (vValidaT[4] == true)
+            {
+                lblStatusT1.ForeColor = Color.Green;
+                lblStatusT1.Text = "APROVADA";
+            }
+            else
+            {
+                lblStatusT1.ForeColor = Color.Red;
+                lblStatusT1.Text = "REPROVADA";
+            }
+
+            if (vValidaT[5] == true)
+            {
+                lblStatusT2.ForeColor = Color.Green;
+                lblStatusT2.Text = "APROVADA";
+            }
+            else
+            {
+                lblStatusT2.ForeColor = Color.Red;
+                lblStatusT2.Text = "REPROVADA";
+            }
 
 
 
