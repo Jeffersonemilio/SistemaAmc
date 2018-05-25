@@ -1386,7 +1386,7 @@
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(182, 38);
             this.btnSalvar.TabIndex = 13;
-            this.btnSalvar.Text = "SALVAR";
+            this.btnSalvar.Text = "GERAR PDF";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
@@ -1446,6 +1446,7 @@
             this.MinimumSize = new System.Drawing.Size(904, 650);
             this.Name = "CalcularTF";
             this.Text = "CalcularTF";
+            this.Load += new System.EventHandler(this.CalcularTF_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

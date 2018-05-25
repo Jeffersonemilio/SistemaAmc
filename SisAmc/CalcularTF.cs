@@ -8,12 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SisAmc.Resources;
+using System.Collections.Generic;
 
 
 namespace SisAmc
 {
     public partial class CalcularTF : Form
     {
+        //PARA ALCANÇAR O OBJETO FORA DO MÉTODO.
+        Mola ObjMola = new Mola();
+        List<string> vPropriedadesMola = new List<string>();
         public CalcularTF()
         {
             InitializeComponent();
@@ -28,7 +32,7 @@ namespace SisAmc
 
         }
         //Instanciando o Objeto Mola
-        Mola ObjMola = new Mola();
+       
 
         private void label12_Click(object sender, EventArgs e)
         {
@@ -144,18 +148,23 @@ namespace SisAmc
             bool[] vValidaT;
 
             vL0 = txtAltLivre.Text;
+            vPropriedadesMola.Add(vL0);
             vVLo = converteCampos(vL0);
 
             vd = txtDiamArame.Text;
+            vPropriedadesMola.Add(vd);
             vVd = converteCampos(vd);
 
             vDi = txtDiamInterno.Text;
+            vPropriedadesMola.Add(vDi);
             vVdi = converteCampos(vDi);
 
             vIg = txtEspTotais.Text;
+            vPropriedadesMola.Add(vIg);
             vVig = converteCampos(vIg);
 
             vCkcRetifica = ckcRetificada.Checked;
+           // vPropriedadesMola.Add();
 
 
 
@@ -172,9 +181,11 @@ namespace SisAmc
 
             vDe = ObjMola.calcDiamExt(vVdi, vVd);
             txtDiamExterno.Text = Convert.ToString(vDe);
+            vPropriedadesMola.Add(txtDiamInterno.Text);
 
             vIf = ObjMola.calcEspUteis(vVig);
             txtEspUteis.Text = Convert.ToString(vIf);
+            vPropriedadesMola.Add(txtEspUteis.Text);
 
             vDm = ObjMola.calcDiamMed(vVdi, vVd);
             txtDiamMedio.Text = Convert.ToString(vDm);
@@ -287,10 +298,10 @@ namespace SisAmc
             vS2 = ObjMola.calcS2(vSs2);
             lblS2.Text = Convert.ToString(vS2);
 
-            vP1 = ObjMola.calcP1(vSs1, vConstElast);
+            vP1 = ObjMola.calcP1(vS1, vConstElast);
             lblP1.Text = Convert.ToString(vP1);
 
-            vP2 = ObjMola.calcP2(vSs2, vConstElast);
+            vP2 = ObjMola.calcP2(vS2, vConstElast);
             lblP2.Text = Convert.ToString(vP2);
 
 
@@ -533,7 +544,27 @@ namespace SisAmc
             - OBSERVAÇÕES
             - LINHA AUTOMOTIVA
 
-             */
+             
+            verificaCampos();
+            
+            string[] vArrayMola = new string[5];
+
+            vArrayMola[0] = txtAltLivre.Text;
+            vArrayMola[1] = txtDiamArame.Text;
+
+            MessageBox.Show(vArrayMola[0] +" "+ vArrayMola[1]);
+           */
+
+            
+
+           
+
+            MessageBox.Show(vPropriedadesMola[0] + " " + vPropriedadesMola[1]  + " " + vPropriedadesMola[2] + " " + vPropriedadesMola[3] + " " + vPropriedadesMola[4] + " " + vPropriedadesMola[5]);
+
+
+
+
+
         }
 
         private void btnConsultar_Click(object sender, EventArgs e)
@@ -541,6 +572,11 @@ namespace SisAmc
            
 
             
+        }
+
+        private void CalcularTF_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

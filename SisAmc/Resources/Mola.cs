@@ -412,9 +412,11 @@ namespace SisAmc.Resources
             float vSs1, vS1, valor;
             vSs1 = calcSs1;
             valor = vSs1;
-            float percentual = Convert.ToSingle(0.05 / 100.0);
+          //  float percentual = Convert.ToSingle(0.05 / 100.0);
             
-            float valor_final = valor + (percentual * valor);
+           float valor_final = valor + (Convert.ToSingle(0.05) * valor);
+
+
              vS1 = valor_final;
 
             return vS1;
@@ -426,16 +428,16 @@ namespace SisAmc.Resources
             vSs2 = calcSs2;
             valor = vSs2;
             float percentual = Convert.ToSingle(10 / 100.0);
-            float valor_final = calcSs2 - (percentual * valor );
+            float valor_final = valor - (percentual * valor );
             vS2 = valor_final;
 
             return vS2;
         }
 
-        public float calcP1(float calcSs1, float calcConstElast)
+        public float calcP1(float calcS1, float calcConstElast)
         {
             float vSs1, vCalcCont, vP1;
-            vSs1 = calcSs1;
+            vSs1 = calcS1;
             vCalcCont = calcConstElast;
             vP1 = vSs1 * vCalcCont;
 
@@ -443,10 +445,10 @@ namespace SisAmc.Resources
             return vP1;
         }
 
-        public float calcP2(float calcSs2, float calcConstElast)
+        public float calcP2(float calcS2, float calcConstElast)
         {
             float vSs2, vCalcCont, vP2;
-            vSs2 = calcSs2;
+            vSs2 = calcS2;
             vCalcCont = calcConstElast;
             vP2 = vSs2 * vCalcCont;
 
