@@ -164,7 +164,8 @@ namespace SisAmc
             vVig = converteCampos(vIg);
 
             vCkcRetifica = ckcRetificada.Checked;
-           // vPropriedadesMola.Add();
+            
+          
 
 
 
@@ -189,6 +190,7 @@ namespace SisAmc
 
             vDm = ObjMola.calcDiamMed(vVdi, vVd);
             txtDiamMedio.Text = Convert.ToString(vDm);
+            vPropriedadesMola.Add(txtDiamMedio.Text);
 
             //Revisar pois ainda não foi criado em sua totalidade.
             vCompTotal = ObjMola.calcCompFinal(vDm, vVig);
@@ -555,11 +557,19 @@ namespace SisAmc
             MessageBox.Show(vArrayMola[0] +" "+ vArrayMola[1]);
            */
 
-            
 
-           
+            if (ckcRetificada.Checked == false)
+            {
+                vPropriedadesMola.Add("Sem Retifica");
 
-            MessageBox.Show(vPropriedadesMola[0] + " " + vPropriedadesMola[1]  + " " + vPropriedadesMola[2] + " " + vPropriedadesMola[3] + " " + vPropriedadesMola[4] + " " + vPropriedadesMola[5]);
+            }
+            else
+            {
+                vPropriedadesMola.Add("Retificada");
+            }
+
+
+            MessageBox.Show(vPropriedadesMola[0] + " " + vPropriedadesMola[1]  + " " + vPropriedadesMola[2] + " " + vPropriedadesMola[3] + " " + vPropriedadesMola[4] + " " + vPropriedadesMola[5] + " " + vPropriedadesMola[6] );
 
 
 
