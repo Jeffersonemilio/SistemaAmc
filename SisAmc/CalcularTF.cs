@@ -565,7 +565,7 @@ namespace SisAmc
             }
             else
             {
-                vPropriedadesMola.Add("Retificada");
+                vPropriedadesMola.Add("Retificada.");
             }
 
 
