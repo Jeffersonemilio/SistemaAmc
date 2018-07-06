@@ -16,6 +16,8 @@ namespace SisAmc
     public partial class CalcularTF : Form
     {
         //PARA ALCANÇAR O OBJETO FORA DO MÉTODO.
+
+        //Instanciando o Objeto Mola
         Mola ObjMola = new Mola();
         List<string> vPropriedadesMola = new List<string>();
         public CalcularTF()
@@ -31,7 +33,7 @@ namespace SisAmc
             cmbLinhaAuto.Items.Insert(3, "Personalizada");
 
         }
-        //Instanciando o Objeto Mola
+        
        
 
         private void label12_Click(object sender, EventArgs e)
@@ -49,16 +51,22 @@ namespace SisAmc
             if ( cmbLinhaAuto.SelectedIndex == 0)
             {
                 lblCorPintura.BackColor = Color.Black;
+                vPropriedadesMola.Add("PRETO");
             }
             else if(cmbLinhaAuto.SelectedIndex == 1)
             {
                 lblCorPintura.BackColor = Color.Blue;
-            }else if(cmbLinhaAuto.SelectedIndex == 2)
+                vPropriedadesMola.Add("AZUL");
+            }
+            else if(cmbLinhaAuto.SelectedIndex == 2)
             {
                 lblCorPintura.BackColor = Color.Black;
-            }else if(cmbLinhaAuto.SelectedIndex == 3)
+                vPropriedadesMola.Add("PRETO");
+            }
+            else if(cmbLinhaAuto.SelectedIndex == 3)
             {
                 lblCorPintura.BackColor = Color.Orange;
+                vPropriedadesMola.Add("LARANJA");
             }
 
         }
@@ -126,6 +134,43 @@ namespace SisAmc
         {
 
         }
+        
+
+        /// <summary>
+        /// Variaves que vão armazenar os resuldados das operaçoes matemáticas
+        /// 
+        /// </summary>
+        string vTf, vAco, vL0, vd, vDi, vIg, vSentHelice, vMandril;
+        float vDe, vIf, vDm, vCompTotal, vRelEnr, vIndEsb, vConstElast, vLbl, vSa, vLn, vSbl, vSn, vSs1, vSs2,
+            vLl1, vLl2, vPbl, vPn, vPp2, vPp1, vTtl, vTn, vTt1, vTt2, vVLo, vVd, vVdi, vVig, vBarraTeste, vBarraEnrolar, VPesoMola, vP1, vP2,
+            vS1, vS2, vT1, vT2;
+        bool vCkcRetifica;
+        bool[] vValidaT;
+
+        public void geraRelatorio()
+        {
+            vPropriedadesMola.Clear();
+            vPropriedadesMola.Add(Convert.ToString(vDe));
+            MessageBox.Show(vPropriedadesMola[0]);
+
+            if (ckcRetificada.Checked == false)
+            {
+                vPropriedadesMola.Add("Sem Retifica");
+
+            }
+            else
+            {
+                vPropriedadesMola.Add("Retificada.");
+            }
+
+
+
+           // vPropriedadesMola.Add(Convert.ToString( vCkcRetifica));
+            MessageBox.Show(vPropriedadesMola[1]);
+
+        }
+
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -137,15 +182,10 @@ namespace SisAmc
                 return;
             }
             /////////////////////////////////////////
+            
 
 
 
-            string vTf, vAco, vL0, vd, vDi, vIg, vSentHelice;
-            float vDe, vIf, vDm, vCompTotal, vRelEnr, vIndEsb, vConstElast, vLbl, vSa, vLn, vSbl, vSn, vSs1, vSs2,
-                vLl1, vLl2, vPbl, vPn, vPp2, vPp1, vTtl, vTn, vTt1, vTt2, vVLo, vVd, vVdi, vVig, vBarraTeste, vBarraEnrolar, VPesoMola, vP1, vP2,
-                vS1, vS2, vT1, vT2;
-            bool vCkcRetifica;
-            bool[] vValidaT;
 
             vL0 = txtAltLivre.Text;
             vPropriedadesMola.Add(vL0);
@@ -179,10 +219,11 @@ namespace SisAmc
 
             MessageBox.Show("Conversão ok");
 
+            
 
             vDe = ObjMola.calcDiamExt(vVdi, vVd);
             txtDiamExterno.Text = Convert.ToString(vDe);
-            vPropriedadesMola.Add(txtDiamInterno.Text);
+            vPropriedadesMola.Add(Convert.ToString(vDe));
 
             vIf = ObjMola.calcEspUteis(vVig);
             txtEspUteis.Text = Convert.ToString(vIf);
@@ -192,9 +233,16 @@ namespace SisAmc
             txtDiamMedio.Text = Convert.ToString(vDm);
             vPropriedadesMola.Add(txtDiamMedio.Text);
 
+            vMandril = txtMandril.Text;
+            vPropriedadesMola.Add(vMandril);
+
+            vSentHelice = cmbSentHelice.Text;
+            vPropriedadesMola.Add(vSentHelice);
+
             //Revisar pois ainda não foi criado em sua totalidade.
             vCompTotal = ObjMola.calcCompFinal(vDm, vVig);
             lblRelCompFinal.Text = Convert.ToString(vCompTotal);
+            vPropriedadesMola.Add(lblRelCompFinal.Text);
 
             vRelEnr = ObjMola.calcRelacEnrolamento(vDm, vVd);
             //txtRelEnr.Text = Convert.ToString(vRelEnr);
@@ -208,6 +256,16 @@ namespace SisAmc
             {
                 txtRelEnr.ForeColor = Color.Green;
                 txtRelEnr.Text = "APROVADO";
+            }
+
+            if (ckcRetificada.Checked == false)
+            {
+                vPropriedadesMola.Add("Sem Retifica");
+
+            }
+            else
+            {
+                vPropriedadesMola.Add("Retificada.");
             }
 
             vIndEsb = ObjMola.calcIndEsbeltez(vVLo, vDm);
@@ -531,6 +589,7 @@ namespace SisAmc
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
+            vPropriedadesMola.Clear();
             /* A função desse botão será insertar no banco de dados os valores importantes 
             aos calculos dessa mola. 
 
@@ -558,18 +617,10 @@ namespace SisAmc
            */
 
 
-            if (ckcRetificada.Checked == false)
-            {
-                vPropriedadesMola.Add("Sem Retifica");
-
-            }
-            else
-            {
-                vPropriedadesMola.Add("Retificada.");
-            }
 
 
-            MessageBox.Show(vPropriedadesMola[0] + " " + vPropriedadesMola[1]  + " " + vPropriedadesMola[2] + " " + vPropriedadesMola[3] + " " + vPropriedadesMola[4] + " " + vPropriedadesMola[5] + " " + vPropriedadesMola[6] );
+
+          
 
 
 
@@ -579,7 +630,7 @@ namespace SisAmc
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-           
+            geraRelatorio();
 
             
         }
